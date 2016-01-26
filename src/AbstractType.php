@@ -48,42 +48,42 @@ abstract class AbstractType implements TypeInterface
     /**
      * the Device is a mobile device
      *
-     * @var string
+     * @var bool
      */
     protected $mobile = false;
 
     /**
      * the Device is a desktop device
      *
-     * @var string
+     * @var bool
      */
     protected $desktop = false;
 
     /**
      * the Device is a console
      *
-     * @var string
+     * @var bool
      */
     protected $console = false;
 
     /**
      * the Device is a tv device
      *
-     * @var string
+     * @var bool
      */
     protected $tv = false;
 
     /**
      * the Device is a mobile phone
      *
-     * @var string
+     * @var bool
      */
     protected $phone = false;
 
     /**
      * the Device is a tablet device
      *
-     * @var string
+     * @var bool
      */
     protected $tablet = false;
 
@@ -110,7 +110,7 @@ abstract class AbstractType implements TypeInterface
     /**
      * Returns True, if the Device is a mobile device
      *
-     * @return string
+     * @return bool
      */
     public function isMobile()
     {
@@ -120,7 +120,7 @@ abstract class AbstractType implements TypeInterface
     /**
      * Returns True, if the Device is a desktop device
      *
-     * @return string
+     * @return bool
      */
     public function isDesktop()
     {
@@ -130,7 +130,7 @@ abstract class AbstractType implements TypeInterface
     /**
      * Returns True, if the Device is a console
      *
-     * @return string
+     * @return bool
      */
     public function isConsole()
     {
@@ -140,7 +140,7 @@ abstract class AbstractType implements TypeInterface
     /**
      * Returns True, if the Device is a tv device
      *
-     * @return string
+     * @return bool
      */
     public function isTv()
     {
@@ -150,7 +150,7 @@ abstract class AbstractType implements TypeInterface
     /**
      * Returns True, if the Device is a mobile phone
      *
-     * @return string
+     * @return bool
      */
     public function isPhone()
     {
@@ -160,7 +160,7 @@ abstract class AbstractType implements TypeInterface
     /**
      * Returns True, if the Device is a tablet device
      *
-     * @return string
+     * @return bool
      */
     public function isTablet()
     {

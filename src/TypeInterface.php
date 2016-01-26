@@ -48,42 +48,42 @@ interface TypeInterface
     /**
      * Returns True, if the Device is a mobile device
      *
-     * @return string
+     * @return bool
      */
     public function isMobile();
 
     /**
      * Returns True, if the Device is a desktop device
      *
-     * @return string
+     * @return bool
      */
     public function isDesktop();
 
     /**
      * Returns True, if the Device is a console
      *
-     * @return string
+     * @return bool
      */
     public function isConsole();
 
     /**
      * Returns True, if the Device is a tv device
      *
-     * @return string
+     * @return bool
      */
     public function isTv();
 
     /**
      * Returns True, if the Device is a mobile phone
      *
-     * @return string
+     * @return bool
      */
     public function isPhone();
 
     /**
      * Returns True, if the Device is a tablet device
      *
-     * @return string
+     * @return bool
      */
     public function isTablet();
 }

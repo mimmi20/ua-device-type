@@ -48,42 +48,42 @@ class Desktop extends AbstractType
     /**
      * the Device is a mobile device
      *
-     * @var string
+     * @var bool
      */
     protected $mobile = false;
 
     /**
      * the Device is a desktop device
      *
-     * @var string
+     * @var bool
      */
     protected $desktop = true;
 
     /**
      * the Device is a console
      *
-     * @var string
+     * @var bool
      */
     protected $console = false;
 
     /**
      * the Device is a tv device
      *
-     * @var string
+     * @var bool
      */
     protected $tv = false;
 
     /**
      * the Device is a mobile phone
      *
-     * @var string
+     * @var bool
      */
     protected $phone = false;
 
     /**
      * the Device is a tablet device
      *
-     * @var string
+     * @var bool
      */
     protected $tablet = false;
 }

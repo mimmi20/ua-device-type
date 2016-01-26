@@ -36,21 +36,21 @@ namespace UaDeviceType;
  * @copyright 2012-2015 Thomas Mueller
  * @license   http://www.opensource.org/licenses/MIT MIT License
  */
-class Bot extends AbstractType
+class DigitalCamera extends AbstractType
 {
     /**
      * the name of the company
      *
      * @var string
      */
-    protected $name = 'Bot';
+    protected $name = 'Digital Camera';
 
     /**
      * the Device is a mobile device
      *
      * @var bool
      */
-    protected $mobile = false;
+    protected $mobile = true;
 
     /**
      * the Device is a desktop device
