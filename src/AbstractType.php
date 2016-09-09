@@ -101,7 +101,7 @@ abstract class AbstractType implements TypeInterface
     /**
      * Returns the name of the type
      *
-     * @return string
+     * @return string|null
      */
     public function getName()
     {

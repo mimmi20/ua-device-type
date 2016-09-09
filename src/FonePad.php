@@ -37,14 +37,14 @@ namespace UaDeviceType;
  * @copyright 2012-2015 Thomas Mueller
  * @license   http://www.opensource.org/licenses/MIT MIT License
  */
-class FonePad extends AbstractType
+class FonePad extends AbstractType implements TypeInterface
 {
     /**
      * the name of the company
      *
      * @var string
      */
-    protected $name = 'Tablet';
+    protected $name = 'FonePad';
 
     /**
      * the Device is a mobile device

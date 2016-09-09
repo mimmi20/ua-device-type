@@ -37,21 +37,21 @@ namespace UaDeviceType;
  * @copyright 2012-2015 Thomas Mueller
  * @license   http://www.opensource.org/licenses/MIT MIT License
  */
-class Tv extends AbstractType implements TypeInterface
+class SmartPhone extends AbstractType implements TypeInterface
 {
     /**
      * the name of the company
      *
      * @var string
      */
-    protected $name = 'TV Device';
+    protected $name = 'Smartphone';
 
     /**
      * the Device is a mobile device
      *
      * @var bool
      */
-    protected $mobile = false;
+    protected $mobile = true;
 
     /**
      * the Device is a desktop device
@@ -72,14 +72,14 @@ class Tv extends AbstractType implements TypeInterface
      *
      * @var bool
      */
-    protected $tv = true;
+    protected $tv = false;
 
     /**
      * the Device is a mobile phone
      *
      * @var bool
      */
-    protected $phone = false;
+    protected $phone = true;
 
     /**
      * the Device is a tablet device

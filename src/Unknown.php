@@ -37,7 +37,7 @@ namespace UaDeviceType;
  * @copyright 2012-2015 Thomas Mueller
  * @license   http://www.opensource.org/licenses/MIT MIT License
  */
-class Unknown extends AbstractType
+class Unknown extends AbstractType implements TypeInterface
 {
     /**
      * the name of the company
