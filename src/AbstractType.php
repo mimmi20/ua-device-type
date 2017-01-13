@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2012-2015, Thomas Mueller <t_mueller_stolzenhain@yahoo.de>
+ * Copyright (c) 2012-2017, Thomas Mueller <t_mueller_stolzenhain@yahoo.de>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
@@ -23,7 +23,7 @@
  * @category  BrowserDetector
  *
  * @author    Thomas Mueller <t_mueller_stolzenhain@yahoo.de>
- * @copyright 2012-2015 Thomas Mueller
+ * @copyright 2012-2017 Thomas Mueller
  * @license   http://www.opensource.org/licenses/MIT MIT License
  *
  * @link      https://github.com/mimmi20/BrowserDetector
@@ -34,10 +34,10 @@ namespace UaDeviceType;
 /**
  * @category  BrowserDetector
  *
- * @copyright 2012-2015 Thomas Mueller
+ * @copyright 2012-2017 Thomas Mueller
  * @license   http://www.opensource.org/licenses/MIT MIT License
  */
-abstract class AbstractType implements TypeInterface
+abstract class AbstractType implements TypeInterface, \Serializable
 {
     /**
      * the name of the company
@@ -166,5 +166,81 @@ abstract class AbstractType implements TypeInterface
     public function isTablet()
     {
         return $this->tablet;
+    }
+
+    /**
+     * (PHP 5 &gt;= 5.1.0)<br/>
+     * String representation of object
+     *
+     * @link http://php.net/manual/en/serializable.serialize.php
+     *
+     * @return string the string representation of the object or null
+     */
+    public function serialize()
+    {
+        return serialize($this->toArray());
+    }
+
+    /**
+     * (PHP 5 &gt;= 5.1.0)<br/>
+     * Constructs the object
+     *
+     * @link http://php.net/manual/en/serializable.unserialize.php
+     *
+     * @param string $serialized <p>
+     *                           The string representation of the object.
+     *                           </p>
+     */
+    public function unserialize($serialized)
+    {
+        $unseriliazedData = unserialize($serialized);
+
+        $this->fromArray($unseriliazedData);
+    }
+
+    /**
+     * @return string
+     */
+    public function toJson()
+    {
+        return json_encode($this->toArray(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    }
+
+    /**
+     * @return array
+     */
+    public function toArray()
+    {
+        return [
+            'name'    => $this->name,
+            'mobile'  => $this->mobile,
+            'desktop' => $this->desktop,
+            'console' => $this->console,
+            'tv'      => $this->tv,
+            'phone'   => $this->phone,
+            'tablet'  => $this->tablet,
+        ];
+    }
+
+    /**
+     * @param array $data
+     */
+    public function fromArray(array $data)
+    {
+        $this->name    = isset($data['name']) ? $data['name'] : null;
+        $this->mobile  = isset($data['mobile']) ? $data['mobile'] : false;
+        $this->desktop = isset($data['desktop']) ? $data['desktop'] : false;
+        $this->console = isset($data['console']) ? $data['console'] : false;
+        $this->tv      = isset($data['tv']) ? $data['tv'] : false;
+        $this->phone   = isset($data['phone']) ? $data['phone'] : false;
+        $this->tablet  = isset($data['tablet']) ? $data['tablet'] : false;
+    }
+
+    /**
+     * @param string $json
+     */
+    public function fromJson($json)
+    {
+        $this->fromArray(json_decode($json));
     }
 }
