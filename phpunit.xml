@@ -16,6 +16,7 @@
         <ini name="error_reporting" value="-1"/>
         <ini name="memory_limit" value="-1"/>
     </php>
+
     <testsuites>
         <testsuite name="UA-Device-Type Test Suite">
             <directory>tests/</directory>
@@ -23,8 +24,12 @@
     </testsuites>
 
     <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
+        <whitelist addUncoveredFilesFromWhitelist="true" processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">src/</directory>
         </whitelist>
     </filter>
+
+    <logging>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="true"/>
+    </logging>
 </phpunit>

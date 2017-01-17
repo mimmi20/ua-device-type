@@ -39,14 +39,14 @@ class TypeTest extends \PHPUnit_Framework_TestCase
     /**
      * tests the constructor and the getter
      *
-     * @covers Type::__construct()
-     * @covers Type::getName()
-     * @covers Type::isMobile()
-     * @covers Type::isDesktop()
-     * @covers Type::isConsole()
-     * @covers Type::isTv()
-     * @covers Type::isPhone()
-     * @covers Type::isTablet()
+     * @covers UaDeviceType\Type::__construct()
+     * @covers UaDeviceType\Type::getName()
+     * @covers UaDeviceType\Type::isMobile()
+     * @covers UaDeviceType\Type::isDesktop()
+     * @covers UaDeviceType\Type::isConsole()
+     * @covers UaDeviceType\Type::isTv()
+     * @covers UaDeviceType\Type::isPhone()
+     * @covers UaDeviceType\Type::isTablet()
      */
     public function testSetterGetter()
     {
@@ -74,7 +74,7 @@ class TypeTest extends \PHPUnit_Framework_TestCase
     /**
      * tests the __toString function
      *
-     * @covers Type::__toString()
+     * @covers UaDeviceType\Type::__toString()
      */
     public function testTostring()
     {
@@ -90,8 +90,8 @@ class TypeTest extends \PHPUnit_Framework_TestCase
      * @param \UaDeviceType\Type $type
      *
      * @depends testSetterGetter
-     * @covers Type::serialize()
-     * @covers Type::unserialize()
+     * @covers UaDeviceType\Type::serialize()
+     * @covers UaDeviceType\Type::unserialize()
      */
     public function testSerialize(Type $type)
     {
@@ -105,9 +105,9 @@ class TypeTest extends \PHPUnit_Framework_TestCase
      * @param \UaDeviceType\Type $type
      *
      * @depends testSetterGetter
-     * @covers Type::toJson()
-     * @covers TypeFactory::__construct
-     * @covers TypeFactory::fromJson
+     * @covers UaDeviceType\Type::toJson()
+     * @covers UaDeviceType\TypeFactory::__construct
+     * @covers UaDeviceType\TypeFactory::fromJson
      */
     public function testTojson(Type $type)
     {
@@ -121,9 +121,9 @@ class TypeTest extends \PHPUnit_Framework_TestCase
      * @param \UaDeviceType\Type $type
      *
      * @depends testSetterGetter
-     * @covers Type::toJson()
-     * @covers TypeFactory::__construct
-     * @covers TypeFactory::fromArray
+     * @covers UaDeviceType\Type::toJson()
+     * @covers UaDeviceType\TypeFactory::__construct
+     * @covers UaDeviceType\TypeFactory::fromArray
      */
     public function testToarray(Type $type)
     {

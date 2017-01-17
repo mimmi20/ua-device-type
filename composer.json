@@ -27,12 +27,14 @@
     "source": "https://github.com/mimmi20/ua-device-type"
   },
   "require": {
-    "php": "^7.0 || ^7.1"
+    "php": "^7.0 || ^7.1",
+    "psr/cache": "^1.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^5.7",
     "squizlabs/php_codesniffer": "^2.5",
-    "friendsofphp/php-cs-fixer": "^1.11"
+    "friendsofphp/php-cs-fixer": "^1.11",
+    "cache/cache": "dev-master"
   },
   "autoload": {
     "psr-4": {

@@ -31,6 +31,9 @@
 
 namespace UaDeviceType;
 
+use BrowserDetector\Loader\LoaderInterface;
+use Psr\Cache\CacheItemPoolInterface;
+
 /**
  * @category  BrowserDetector
  *
@@ -59,22 +62,46 @@ class TypeFactory
     const UNKNOWN = 'unknown';
 
     /**
+     * @var \Psr\Cache\CacheItemPoolInterface|null
+     */
+    private $cache = null;
+
+    /**
+     * @var \BrowserDetector\Loader\LoaderInterface|null
+     */
+    private $loader = null;
+
+    /**
+     * @param \Psr\Cache\CacheItemPoolInterface       $cache
+     * @param \BrowserDetector\Loader\LoaderInterface $loader
+     */
+    public function __construct(CacheItemPoolInterface $cache, LoaderInterface $loader)
+    {
+        $this->cache  = $cache;
+        $this->loader = $loader;
+    }
+
+    /**
+     * Gets the information about the browser type
+     *
      * @param string $type
      *
-     * @return \UaBrowserType\TypeInterface
+     * @return \UaDeviceType\TypeInterface
      */
-    public function build($type = 'unknown')
+    public function detect($type)
     {
         switch ($type) {
             default:
-                return 'unknown';
+                $key = 'unknown';
         }
+
+        return $this->loader->load($key);
     }
 
     /**
      * @param array $data
      *
-     * @return \UaDeviceType\Type
+     * @return \UaDeviceType\TypeInterface
      */
     public function fromArray(array $data)
     {
@@ -92,7 +119,7 @@ class TypeFactory
     /**
      * @param string $json
      *
-     * @return \UaDeviceType\Type
+     * @return \UaDeviceType\TypeInterface
      */
     public function fromJson($json)
     {
