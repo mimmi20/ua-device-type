@@ -25,10 +25,13 @@ class TypeLoaderTest extends \PHPUnit_Framework_TestCase
     {
         $adapter      = new Local(__DIR__ . '/../cache/');
         $cache        = new FilesystemCachePool(new Filesystem($adapter));
+        $cache->clear();
         $this->object = new TypeLoader($cache);
     }
 
     /**
+     * @covers UaDeviceType\TypeLoader::__construct
+     * @covers UaDeviceType\TypeLoader::init
      * @covers UaDeviceType\TypeLoader::has
      */
     public function testHasUnknown()
@@ -37,6 +40,10 @@ class TypeLoaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @uses UaDeviceType\Type::__construct
+     * @uses UaDeviceType\Type::getName
+     * @covers UaDeviceType\TypeLoader::__construct
+     * @covers UaDeviceType\TypeLoader::init
      * @covers UaDeviceType\TypeLoader::has
      * @covers UaDeviceType\TypeLoader::load
      */
@@ -52,6 +59,8 @@ class TypeLoaderTest extends \PHPUnit_Framework_TestCase
      * @expectedException \BrowserDetector\Loader\NotFoundException
      * @expectedExceptionMessage the device type with key "does not exist" was not found
      *
+     * @covers UaDeviceType\TypeLoader::__construct
+     * @covers UaDeviceType\TypeLoader::init
      * @covers UaDeviceType\TypeLoader::has
      * @covers UaDeviceType\TypeLoader::load
      */

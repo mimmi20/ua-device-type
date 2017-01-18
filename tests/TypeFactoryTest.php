@@ -26,13 +26,20 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
     {
         $adapter      = new Local(__DIR__ . '/../cache/');
         $cache        = new FilesystemCachePool(new Filesystem($adapter));
+        $cache->clear();
         $loader       = new TypeLoader($cache);
         $this->object = new TypeFactory($cache, $loader);
     }
 
     /**
+     * @uses UaDeviceType\Type::__construct
+     * @uses UaDeviceType\Type::getName
+     * @uses UaDeviceType\TypeLoader::__construct
+     * @uses UaDeviceType\TypeLoader::init
+     * @uses UaDeviceType\TypeLoader::initCache
      * @uses UaDeviceType\TypeLoader::has
      * @uses UaDeviceType\TypeLoader::load
+     * @covers UaDeviceType\TypeFactory::__construct
      * @covers UaDeviceType\TypeFactory::detect
      */
     public function testLoadUnknown()
@@ -47,8 +54,11 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
      * @expectedException \BrowserDetector\Loader\NotFoundException
      * @expectedExceptionMessage the device type with key "does not exist" was not found
      *
+     * @uses UaDeviceType\TypeLoader::__construct
+     * @uses UaDeviceType\TypeLoader::init
      * @uses UaDeviceType\TypeLoader::has
      * @uses UaDeviceType\TypeLoader::load
+     * @covers UaDeviceType\TypeFactory::__construct
      * @covers UaDeviceType\TypeFactory::detect
      */
     public function testLoadNotAvailable()
@@ -57,6 +67,16 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @uses UaDeviceType\Type::__construct
+     * @uses UaDeviceType\Type::getName
+     * @uses UaDeviceType\Type::isConsole
+     * @uses UaDeviceType\Type::isDesktop
+     * @uses UaDeviceType\Type::isMobile
+     * @uses UaDeviceType\Type::isPhone
+     * @uses UaDeviceType\Type::isTablet
+     * @uses UaDeviceType\Type::isTv
+     * @uses UaDeviceType\TypeLoader::__construct
+     * @covers UaDeviceType\TypeFactory::__construct
      * @covers UaDeviceType\TypeFactory::fromArray
      */
     public function testFromArray()
@@ -92,7 +112,17 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @uses UaDeviceType\Type::__construct
+     * @uses UaDeviceType\Type::getName
+     * @uses UaDeviceType\Type::isConsole
+     * @uses UaDeviceType\Type::isDesktop
+     * @uses UaDeviceType\Type::isMobile
+     * @uses UaDeviceType\Type::isPhone
+     * @uses UaDeviceType\Type::isTablet
+     * @uses UaDeviceType\Type::isTv
+     * @uses UaDeviceType\TypeLoader::__construct
      * @uses UaDeviceType\TypeFactory::fromArray
+     * @covers UaDeviceType\TypeFactory::__construct
      * @covers UaDeviceType\TypeFactory::fromJson
      */
     public function testFromJson()
