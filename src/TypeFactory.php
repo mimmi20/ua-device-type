@@ -31,6 +31,7 @@
 
 namespace UaDeviceType;
 
+use BrowserDetector\Factory\FactoryInterface;
 use BrowserDetector\Loader\LoaderInterface;
 use Psr\Cache\CacheItemPoolInterface;
 
@@ -40,26 +41,26 @@ use Psr\Cache\CacheItemPoolInterface;
  * @copyright 2012-2017 Thomas Mueller
  * @license   http://www.opensource.org/licenses/MIT MIT License
  */
-class TypeFactory
+class TypeFactory implements FactoryInterface
 {
-    const BOT = 'bot';
+    const BOT                      = 'bot';
     const CAR_ENTERTAINMENT_SYSTEM = 'car-entertainment-system';
-    const CONSOLE = 'console';
-    const DESKTOP = 'desktop';
-    const DIGITAL_CAMERA = 'digital-camera';
-    const FEATURE_PHONE = 'feature-phone';
-    const FONE_PAD = 'fone-pad';
-    const MOBILE_CONSOLE = 'mobile-console';
-    const MOBILE_DEVICE = 'mobile-device';
-    const MOBILE_MEDIA_PLAYER = 'mobile-media-player';
-    const MOBILE_PHONE = 'mobile-phone';
-    const PHABLET = 'phablet';
-    const SMARTPHONE = 'smartphone';
-    const TABLET = 'tablet';
-    const TV = 'tv';
-    const TV_CONSOLE = 'tv-console';
-    const TV_MEDIA_PLAYER = 'tv-media-player';
-    const UNKNOWN = 'unknown';
+    const CONSOLE                  = 'console';
+    const DESKTOP                  = 'desktop';
+    const DIGITAL_CAMERA           = 'digital-camera';
+    const FEATURE_PHONE            = 'feature-phone';
+    const FONE_PAD                 = 'fone-pad';
+    const MOBILE_CONSOLE           = 'mobile-console';
+    const MOBILE_DEVICE            = 'mobile-device';
+    const MOBILE_MEDIA_PLAYER      = 'mobile-media-player';
+    const MOBILE_PHONE             = 'mobile-phone';
+    const PHABLET                  = 'phablet';
+    const SMARTPHONE               = 'smartphone';
+    const TABLET                   = 'tablet';
+    const TV                       = 'tv';
+    const TV_CONSOLE               = 'tv-console';
+    const TV_MEDIA_PLAYER          = 'tv-media-player';
+    const UNKNOWN                  = 'unknown';
 
     /**
      * @var \Psr\Cache\CacheItemPoolInterface|null
@@ -90,12 +91,7 @@ class TypeFactory
      */
     public function detect($type)
     {
-        switch ($type) {
-            default:
-                $key = 'unknown';
-        }
-
-        return $this->loader->load($key);
+        return $this->loader->load($type);
     }
 
     /**

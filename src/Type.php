@@ -106,13 +106,13 @@ class Type implements TypeInterface, \Serializable
         $phone = false,
         $tablet = false
     ) {
-        $this->name = $name;
-        $this->mobile = $mobile;
+        $this->name    = $name;
+        $this->mobile  = $mobile;
         $this->desktop = $desktop;
         $this->console = $console;
-        $this->tv = $tv;
-        $this->phone = $phone;
-        $this->tablet = $tablet;
+        $this->tv      = $tv;
+        $this->phone   = $phone;
+        $this->tablet  = $tablet;
     }
 
     /**

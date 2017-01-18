@@ -31,9 +31,10 @@
 
 namespace UaDeviceType;
 
+use BrowserDetector\Loader\LoaderInterface;
+use BrowserDetector\Loader\NotFoundException;
 use Psr\Cache\CacheItemInterface;
 use Psr\Cache\CacheItemPoolInterface;
-use BrowserDetector\Loader\NotFoundException;
 
 /**
  * Browser detection class
@@ -90,7 +91,8 @@ class TypeLoader implements LoaderInterface
      * @param string $key
      *
      * @throws \BrowserDetector\Loader\NotFoundException
-     * @return \UaBrowserType\TypeInterface
+     *
+     * @return \UaDeviceType\TypeInterface
      */
     public function load($key)
     {
