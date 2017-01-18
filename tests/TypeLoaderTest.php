@@ -32,6 +32,7 @@ class TypeLoaderTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers UaDeviceType\TypeLoader::__construct
      * @covers UaDeviceType\TypeLoader::init
+     * @covers UaDeviceType\TypeLoader::initCache
      * @covers UaDeviceType\TypeLoader::has
      */
     public function testHasUnknown()
@@ -44,6 +45,7 @@ class TypeLoaderTest extends \PHPUnit_Framework_TestCase
      * @uses UaDeviceType\Type::getName
      * @covers UaDeviceType\TypeLoader::__construct
      * @covers UaDeviceType\TypeLoader::init
+     * @covers UaDeviceType\TypeLoader::initCache
      * @covers UaDeviceType\TypeLoader::has
      * @covers UaDeviceType\TypeLoader::load
      */
@@ -61,6 +63,7 @@ class TypeLoaderTest extends \PHPUnit_Framework_TestCase
      *
      * @covers UaDeviceType\TypeLoader::__construct
      * @covers UaDeviceType\TypeLoader::init
+     * @covers UaDeviceType\TypeLoader::initCache
      * @covers UaDeviceType\TypeLoader::has
      * @covers UaDeviceType\TypeLoader::load
      */

@@ -56,6 +56,7 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
      *
      * @uses UaDeviceType\TypeLoader::__construct
      * @uses UaDeviceType\TypeLoader::init
+     * @uses UaDeviceType\TypeLoader::initCache
      * @uses UaDeviceType\TypeLoader::has
      * @uses UaDeviceType\TypeLoader::load
      * @covers UaDeviceType\TypeFactory::__construct
