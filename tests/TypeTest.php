@@ -112,6 +112,7 @@ class TypeTest extends \PHPUnit_Framework_TestCase
      * @param \UaDeviceType\Type $type
      *
      * @depends testSetterGetter
+     *
      * @uses UaDeviceType\TypeFactory::__construct
      * @uses UaDeviceType\TypeFactory::fromArray
      * @uses UaDeviceType\TypeFactory::fromJson
@@ -137,6 +138,7 @@ class TypeTest extends \PHPUnit_Framework_TestCase
      * @param \UaDeviceType\Type $type
      *
      * @depends testSetterGetter
+     *
      * @uses UaDeviceType\TypeFactory::__construct
      * @uses UaDeviceType\TypeFactory::fromArray
      * @uses UaDeviceType\TypeLoader::__construct
