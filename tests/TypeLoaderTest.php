@@ -30,10 +30,7 @@ class TypeLoaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers UaDeviceType\TypeLoader::__construct
-     * @covers UaDeviceType\TypeLoader::init
-     * @covers UaDeviceType\TypeLoader::initCache
-     * @covers UaDeviceType\TypeLoader::has
+     *
      */
     public function testHasUnknown()
     {
@@ -41,13 +38,7 @@ class TypeLoaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @uses UaDeviceType\Type::__construct
-     * @uses UaDeviceType\Type::getName
-     * @covers UaDeviceType\TypeLoader::__construct
-     * @covers UaDeviceType\TypeLoader::init
-     * @covers UaDeviceType\TypeLoader::initCache
-     * @covers UaDeviceType\TypeLoader::has
-     * @covers UaDeviceType\TypeLoader::load
+     *
      */
     public function testLoadUnknown()
     {
@@ -60,12 +51,6 @@ class TypeLoaderTest extends \PHPUnit_Framework_TestCase
     /**
      * @expectedException \BrowserDetector\Loader\NotFoundException
      * @expectedExceptionMessage the device type with key "does not exist" was not found
-     *
-     * @covers UaDeviceType\TypeLoader::__construct
-     * @covers UaDeviceType\TypeLoader::init
-     * @covers UaDeviceType\TypeLoader::initCache
-     * @covers UaDeviceType\TypeLoader::has
-     * @covers UaDeviceType\TypeLoader::load
      */
     public function testLoadNotAvailable()
     {

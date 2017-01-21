@@ -24,17 +24,7 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @uses UaDeviceType\Type::__construct
-     * @uses UaDeviceType\Type::getName
-     * @uses UaDeviceType\Type::isConsole
-     * @uses UaDeviceType\Type::isDesktop
-     * @uses UaDeviceType\Type::isMobile
-     * @uses UaDeviceType\Type::isPhone
-     * @uses UaDeviceType\Type::isTablet
-     * @uses UaDeviceType\Type::isTv
-     * @uses UaDeviceType\TypeLoader::__construct
-     * @covers UaDeviceType\TypeFactory::__construct
-     * @covers UaDeviceType\TypeFactory::fromArray
+     *
      */
     public function testFromArray()
     {
@@ -69,18 +59,7 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @uses UaDeviceType\Type::__construct
-     * @uses UaDeviceType\Type::getName
-     * @uses UaDeviceType\Type::isConsole
-     * @uses UaDeviceType\Type::isDesktop
-     * @uses UaDeviceType\Type::isMobile
-     * @uses UaDeviceType\Type::isPhone
-     * @uses UaDeviceType\Type::isTablet
-     * @uses UaDeviceType\Type::isTv
-     * @uses UaDeviceType\TypeLoader::__construct
-     * @uses UaDeviceType\TypeFactory::fromArray
-     * @covers UaDeviceType\TypeFactory::__construct
-     * @covers UaDeviceType\TypeFactory::fromJson
+     *
      */
     public function testFromJson()
     {

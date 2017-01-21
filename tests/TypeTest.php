@@ -38,15 +38,6 @@ class TypeTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * tests the constructor and the getter
-     *
-     * @covers UaDeviceType\Type::__construct()
-     * @covers UaDeviceType\Type::getName()
-     * @covers UaDeviceType\Type::isMobile()
-     * @covers UaDeviceType\Type::isDesktop()
-     * @covers UaDeviceType\Type::isConsole()
-     * @covers UaDeviceType\Type::isTv()
-     * @covers UaDeviceType\Type::isPhone()
-     * @covers UaDeviceType\Type::isTablet()
      */
     public function testSetterGetter()
     {
@@ -73,10 +64,6 @@ class TypeTest extends \PHPUnit_Framework_TestCase
 
     /**
      * tests the __toString function
-     *
-     * @covers UaDeviceType\Type::__construct
-     * @covers UaDeviceType\Type::getName
-     * @covers UaDeviceType\Type::__toString()
      */
     public function testTostring()
     {
@@ -92,9 +79,6 @@ class TypeTest extends \PHPUnit_Framework_TestCase
      * @param \UaDeviceType\Type $type
      *
      * @depends testSetterGetter
-     * @covers UaDeviceType\Type::toArray
-     * @covers UaDeviceType\Type::serialize()
-     * @covers UaDeviceType\Type::unserialize()
      */
     public function testSerialize(Type $type)
     {
@@ -108,14 +92,6 @@ class TypeTest extends \PHPUnit_Framework_TestCase
      * @param \UaDeviceType\Type $type
      *
      * @depends testSetterGetter
-     *
-     * @uses UaDeviceType\TypeFactory::__construct
-     * @uses UaDeviceType\TypeFactory::fromArray
-     * @uses UaDeviceType\TypeFactory::fromJson
-     * @uses UaDeviceType\TypeLoader::__construct
-     * @covers UaDeviceType\Type::__construct
-     * @covers UaDeviceType\Type::toArray
-     * @covers UaDeviceType\Type::toJson
      */
     public function testTojson(Type $type)
     {
@@ -129,13 +105,6 @@ class TypeTest extends \PHPUnit_Framework_TestCase
      * @param \UaDeviceType\Type $type
      *
      * @depends testSetterGetter
-     *
-     * @uses UaDeviceType\TypeFactory::__construct
-     * @uses UaDeviceType\TypeFactory::fromArray
-     * @uses UaDeviceType\TypeLoader::__construct
-     * @covers UaDeviceType\Type::__construct
-     * @covers UaDeviceType\Type::toArray
-     * @covers UaDeviceType\Type::toJson
      */
     public function testToarray(Type $type)
     {
