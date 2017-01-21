@@ -1,0 +1,164 @@
+{
+  "bot": {
+    "name": "Bot",
+    "mobile": false,
+    "desktop": false,
+    "console": false,
+    "tv": false,
+    "phone": false,
+    "tablet": false
+  },
+  "car-entertainment-system": {
+    "name": "Car Entertainment System",
+    "mobile": false,
+    "desktop": false,
+    "console": false,
+    "tv": false,
+    "phone": false,
+    "tablet": false
+  },
+  "console": {
+    "name": "Console",
+    "mobile": false,
+    "desktop": false,
+    "console": true,
+    "tv": false,
+    "phone": false,
+    "tablet": false
+  },
+  "desktop": {
+    "name": "Desktop",
+    "mobile": false,
+    "desktop": true,
+    "console": false,
+    "tv": false,
+    "phone": false,
+    "tablet": false
+  },
+  "digital-camera": {
+    "name": "Digital Camera",
+    "mobile": true,
+    "desktop": false,
+    "console": false,
+    "tv": false,
+    "phone": false,
+    "tablet": false
+  },
+  "feature-phone": {
+    "name": "Featurephone",
+    "mobile": true,
+    "desktop": false,
+    "console": false,
+    "tv": false,
+    "phone": true,
+    "tablet": false
+  },
+  "fone-pad": {
+    "name": "FonePad",
+    "mobile": true,
+    "desktop": false,
+    "console": false,
+    "tv": false,
+    "phone": true,
+    "tablet": true
+  },
+  "mobile-console": {
+    "name": "Mobile Device",
+    "mobile": true,
+    "desktop": false,
+    "console": true,
+    "tv": false,
+    "phone": false,
+    "tablet": false
+  },
+  "mobile-device": {
+    "name": "Mobile Device",
+    "mobile": true,
+    "desktop": false,
+    "console": false,
+    "tv": false,
+    "phone": false,
+    "tablet": false
+  },
+  "mobile-media-player": {
+    "name": "Media Player",
+    "mobile": true,
+    "desktop": false,
+    "console": false,
+    "tv": false,
+    "phone": false,
+    "tablet": false
+  },
+  "mobile-phone": {
+    "name": "Mobile Phone",
+    "mobile": true,
+    "desktop": false,
+    "console": false,
+    "tv": false,
+    "phone": false,
+    "tablet": false
+  },
+  "phablet": {
+    "name": "Phablet",
+    "mobile": true,
+    "desktop": false,
+    "console": false,
+    "tv": false,
+    "phone": false,
+    "tablet": true
+  },
+  "smartphone": {
+    "name": "Smartphone",
+    "mobile": true,
+    "desktop": false,
+    "console": false,
+    "tv": false,
+    "phone": false,
+    "tablet": false
+  },
+  "tablet": {
+    "name": "Tablet",
+    "mobile": true,
+    "desktop": false,
+    "console": false,
+    "tv": false,
+    "phone": true,
+    "tablet": true
+  },
+  "tv": {
+    "name": "TV Device",
+    "mobile": false,
+    "desktop": false,
+    "console": false,
+    "tv": true,
+    "phone": false,
+    "tablet": false
+  },
+  "tv-console": {
+    "name": "TV Device",
+    "mobile": false,
+    "desktop": false,
+    "console": true,
+    "tv": true,
+    "phone": false,
+    "tablet": false
+  },
+  "tv-media-player": {
+    "name": "Media Player",
+    "mobile": false,
+    "desktop": false,
+    "console": false,
+    "tv": true,
+    "phone": false,
+    "tablet": false
+  },
+  "unknown": {
+    "name": null,
+    "mobile": false,
+    "desktop": false,
+    "console": false,
+    "tv": false,
+    "phone": false,
+    "tablet": false
+  }
+}
