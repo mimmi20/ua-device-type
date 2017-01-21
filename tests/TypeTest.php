@@ -31,12 +31,8 @@
 
 namespace UaDeviceTypeTest;
 
-use Cache\Adapter\Filesystem\FilesystemCachePool;
-use League\Flysystem\Adapter\Local;
-use League\Flysystem\Filesystem;
 use UaDeviceType\Type;
 use UaDeviceType\TypeFactory;
-use UaDeviceType\TypeLoader;
 
 class TypeTest extends \PHPUnit_Framework_TestCase
 {
@@ -123,13 +119,8 @@ class TypeTest extends \PHPUnit_Framework_TestCase
      */
     public function testTojson(Type $type)
     {
-        $adapter      = new Local(__DIR__ . '/../cache/');
-        $cache        = new FilesystemCachePool(new Filesystem($adapter));
-        $cache->clear();
-        $loader       = new TypeLoader($cache);
-
         $json = $type->toJson();
-        self::assertEquals($type, (new TypeFactory($cache, $loader))->fromJson($json));
+        self::assertEquals($type, (new TypeFactory())->fromJson($json));
     }
 
     /**
@@ -148,12 +139,7 @@ class TypeTest extends \PHPUnit_Framework_TestCase
      */
     public function testToarray(Type $type)
     {
-        $adapter      = new Local(__DIR__ . '/../cache/');
-        $cache        = new FilesystemCachePool(new Filesystem($adapter));
-        $cache->clear();
-        $loader       = new TypeLoader($cache);
-
         $array = $type->toArray();
-        self::assertEquals($type, (new TypeFactory($cache, $loader))->fromArray($array));
+        self::assertEquals($type, (new TypeFactory())->fromArray($array));
     }
 }

@@ -87,4 +87,14 @@ interface TypeInterface
      * @return bool
      */
     public function isTablet();
+
+    /**
+     * @return string
+     */
+    public function toJson();
+
+    /**
+     * @return array
+     */
+    public function toArray();
 }
