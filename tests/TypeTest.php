@@ -32,7 +32,6 @@
 namespace UaDeviceTypeTest;
 
 use UaDeviceType\Type;
-use UaDeviceType\TypeFactory;
 
 class TypeTest extends \PHPUnit_Framework_TestCase
 {
@@ -60,58 +59,5 @@ class TypeTest extends \PHPUnit_Framework_TestCase
         self::assertSame($tv, $result->isTv());
         self::assertSame($phone, $result->isPhone());
         self::assertSame($tablet, $result->isTablet());
-
-        return $result;
-    }
-
-    /**
-     * tests the __toString function
-     */
-    public function testTostring()
-    {
-        $type = 'testType';
-        $name = false;
-        $type = new Type($type, $name);
-
-        self::assertSame('', (string) $type);
-    }
-
-    /**
-     * tests the serialize and the unserialize functions
-     *
-     * @param \UaDeviceType\Type $type
-     *
-     * @depends testSetterGetter
-     */
-    public function testSerialize(Type $type)
-    {
-        $serialized = serialize($type);
-        self::assertEquals($type, unserialize($serialized));
-    }
-
-    /**
-     * tests the toJson function
-     *
-     * @param \UaDeviceType\Type $type
-     *
-     * @depends testSetterGetter
-     */
-    public function testTojson(Type $type)
-    {
-        $json = $type->toJson();
-        self::assertEquals($type, (new TypeFactory())->fromJson($json));
-    }
-
-    /**
-     * tests the toArray function
-     *
-     * @param \UaDeviceType\Type $type
-     *
-     * @depends testSetterGetter
-     */
-    public function testToarray(Type $type)
-    {
-        $array = $type->toArray();
-        self::assertEquals($type, (new TypeFactory())->fromArray($array));
     }
 }
