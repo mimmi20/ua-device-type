@@ -28,6 +28,7 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function testFromArray()
     {
+        $type    = 'testType';
         $name    = 'test1';
         $mobile  = true;
         $desktop = false;
@@ -37,6 +38,7 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
         $tablet  = true;
 
         $data = [
+            'type'    => $type,
             'name'    => $name,
             'mobile'  => $mobile,
             'desktop' => $desktop,
@@ -46,16 +48,17 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
             'tablet'  => $tablet,
         ];
 
-        $type = $this->object->fromArray($data);
+        $result = $this->object->fromArray($data);
 
-        self::assertInstanceOf('\UaDeviceType\Type', $type);
-        self::assertSame($name, $type->getName());
-        self::assertTrue($type->isMobile());
-        self::assertFalse($type->isDesktop());
-        self::assertFalse($type->isConsole());
-        self::assertTrue($type->isTv());
-        self::assertFalse($type->isPhone());
-        self::assertTrue($type->isTablet());
+        self::assertInstanceOf('\UaDeviceType\Type', $result);
+        self::assertSame($type, $result->getType());
+        self::assertSame($name, $result->getName());
+        self::assertTrue($result->isMobile());
+        self::assertFalse($result->isDesktop());
+        self::assertFalse($result->isConsole());
+        self::assertTrue($result->isTv());
+        self::assertFalse($result->isPhone());
+        self::assertTrue($result->isTablet());
     }
 
     /**
@@ -63,6 +66,7 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function testFromJson()
     {
+        $type    = 'testType';
         $name    = 'test1';
         $mobile  = true;
         $desktop = false;
@@ -81,15 +85,16 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
             'tablet'  => $tablet,
         ];
 
-        $type = $this->object->fromJson(json_encode($data));
+        $result = $this->object->fromJson(json_encode($data));
 
-        self::assertInstanceOf('\UaDeviceType\Type', $type);
-        self::assertSame($name, $type->getName());
-        self::assertTrue($type->isMobile());
-        self::assertFalse($type->isDesktop());
-        self::assertFalse($type->isConsole());
-        self::assertTrue($type->isTv());
-        self::assertFalse($type->isPhone());
-        self::assertTrue($type->isTablet());
+        self::assertInstanceOf('\UaDeviceType\Type', $result);
+        self::assertSame($type, $result->getType());
+        self::assertSame($name, $result->getName());
+        self::assertTrue($result->isMobile());
+        self::assertFalse($result->isDesktop());
+        self::assertFalse($result->isConsole());
+        self::assertTrue($result->isTv());
+        self::assertFalse($result->isPhone());
+        self::assertTrue($result->isTablet());
     }
 }

@@ -40,7 +40,14 @@ namespace UaDeviceType;
 class Type implements TypeInterface, \Serializable
 {
     /**
-     * the name of the company
+     * the type name of the device
+     *
+     * @var string|null
+     */
+    private $type = null;
+
+    /**
+     * the name of the device
      *
      * @var string
      */
@@ -89,6 +96,7 @@ class Type implements TypeInterface, \Serializable
     private $tablet = false;
 
     /**
+     * @param string $type
      * @param string $name
      * @param bool   $mobile
      * @param bool   $desktop
@@ -98,6 +106,7 @@ class Type implements TypeInterface, \Serializable
      * @param bool   $tablet
      */
     public function __construct(
+        $type,
         $name,
         $mobile = false,
         $desktop = false,
@@ -106,6 +115,7 @@ class Type implements TypeInterface, \Serializable
         $phone = false,
         $tablet = false
     ) {
+        $this->type    = $type;
         $this->name    = $name;
         $this->mobile  = $mobile;
         $this->desktop = $desktop;
@@ -123,6 +133,16 @@ class Type implements TypeInterface, \Serializable
     public function __toString()
     {
         return (string) $this->getName();
+    }
+
+    /**
+     * Returns the type name of the device
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 
     /**
@@ -222,6 +242,7 @@ class Type implements TypeInterface, \Serializable
     {
         $data = unserialize($serialized);
 
+        $this->type    = isset($data['type']) ? $data['type'] : null;
         $this->name    = isset($data['name']) ? $data['name'] : null;
         $this->mobile  = isset($data['mobile']) ? $data['mobile'] : false;
         $this->desktop = isset($data['desktop']) ? $data['desktop'] : false;
@@ -245,6 +266,7 @@ class Type implements TypeInterface, \Serializable
     public function toArray()
     {
         return [
+            'type'    => $this->type,
             'name'    => $this->name,
             'mobile'  => $this->mobile,
             'desktop' => $this->desktop,

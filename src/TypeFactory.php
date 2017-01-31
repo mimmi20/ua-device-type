@@ -65,6 +65,7 @@ class TypeFactory
      */
     public function fromArray(array $data)
     {
+        $type    = isset($data['type']) ? $data['type'] : null;
         $name    = isset($data['name']) ? $data['name'] : null;
         $mobile  = isset($data['mobile']) ? $data['mobile'] : false;
         $desktop = isset($data['desktop']) ? $data['desktop'] : false;
@@ -73,7 +74,7 @@ class TypeFactory
         $phone   = isset($data['phone']) ? $data['phone'] : false;
         $tablet  = isset($data['tablet']) ? $data['tablet'] : false;
 
-        return new Type($name, $mobile, $desktop, $console, $tv, $phone, $tablet);
+        return new Type($type, $name, $mobile, $desktop, $console, $tv, $phone, $tablet);
     }
 
     /**

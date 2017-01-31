@@ -41,6 +41,7 @@ class TypeTest extends \PHPUnit_Framework_TestCase
      */
     public function testSetterGetter()
     {
+        $type    = 'testType';
         $name    = 'test1';
         $mobile  = true;
         $desktop = false;
@@ -49,17 +50,18 @@ class TypeTest extends \PHPUnit_Framework_TestCase
         $phone   = [];
         $tablet  = new \stdClass();
 
-        $type = new Type($name, $mobile, $desktop, $console, $tv, $phone, $tablet);
+        $result = new Type($type, $name, $mobile, $desktop, $console, $tv, $phone, $tablet);
 
-        self::assertSame($name, $type->getName());
-        self::assertTrue($type->isMobile());
-        self::assertFalse($type->isDesktop());
-        self::assertNull($type->isConsole());
-        self::assertSame($tv, $type->isTv());
-        self::assertSame($phone, $type->isPhone());
-        self::assertSame($tablet, $type->isTablet());
+        self::assertSame($type, $result->getType());
+        self::assertSame($name, $result->getName());
+        self::assertTrue($result->isMobile());
+        self::assertFalse($result->isDesktop());
+        self::assertNull($result->isConsole());
+        self::assertSame($tv, $result->isTv());
+        self::assertSame($phone, $result->isPhone());
+        self::assertSame($tablet, $result->isTablet());
 
-        return $type;
+        return $result;
     }
 
     /**
@@ -67,8 +69,9 @@ class TypeTest extends \PHPUnit_Framework_TestCase
      */
     public function testTostring()
     {
+        $type = 'testType';
         $name = false;
-        $type = new Type($name);
+        $type = new Type($type, $name);
 
         self::assertSame('', (string) $type);
     }

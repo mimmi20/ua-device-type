@@ -107,6 +107,7 @@ class TypeLoader implements LoaderInterface
         $type = $cacheItem->get();
 
         return new Type(
+            $type->type,
             $type->name,
             $type->mobile,
             $type->desktop,
