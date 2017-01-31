@@ -40,7 +40,14 @@ namespace UaDeviceType;
 interface TypeInterface
 {
     /**
-     * Returns the name of the company
+     * Returns the type name of the device
+     *
+     * @return string
+     */
+    public function getType();
+
+    /**
+     * Returns the name of the device
      *
      * @return string
      */
@@ -87,14 +94,4 @@ interface TypeInterface
      * @return bool
      */
     public function isTablet();
-
-    /**
-     * @return string
-     */
-    public function toJson();
-
-    /**
-     * @return array
-     */
-    public function toArray();
 }

@@ -37,10 +37,17 @@ namespace UaDeviceType;
  * @copyright 2012-2017 Thomas Mueller
  * @license   http://www.opensource.org/licenses/MIT MIT License
  */
-class Type implements TypeInterface, \Serializable
+class Type implements TypeInterface
 {
     /**
-     * the name of the company
+     * the type name of the device
+     *
+     * @var string|null
+     */
+    private $type = null;
+
+    /**
+     * the name of the device
      *
      * @var string
      */
@@ -89,6 +96,7 @@ class Type implements TypeInterface, \Serializable
     private $tablet = false;
 
     /**
+     * @param string $type
      * @param string $name
      * @param bool   $mobile
      * @param bool   $desktop
@@ -98,6 +106,7 @@ class Type implements TypeInterface, \Serializable
      * @param bool   $tablet
      */
     public function __construct(
+        $type,
         $name,
         $mobile = false,
         $desktop = false,
@@ -106,6 +115,7 @@ class Type implements TypeInterface, \Serializable
         $phone = false,
         $tablet = false
     ) {
+        $this->type    = $type;
         $this->name    = $name;
         $this->mobile  = $mobile;
         $this->desktop = $desktop;
@@ -116,13 +126,13 @@ class Type implements TypeInterface, \Serializable
     }
 
     /**
-     * Returns the name of the type
+     * Returns the type name of the device
      *
      * @return string
      */
-    public function __toString()
+    public function getType()
     {
-        return (string) $this->getName();
+        return $this->type;
     }
 
     /**
@@ -193,65 +203,5 @@ class Type implements TypeInterface, \Serializable
     public function isTablet()
     {
         return $this->tablet;
-    }
-
-    /**
-     * (PHP 5 &gt;= 5.1.0)<br/>
-     * String representation of object
-     *
-     * @link http://php.net/manual/en/serializable.serialize.php
-     *
-     * @return string the string representation of the object or null
-     */
-    public function serialize()
-    {
-        return serialize($this->toArray());
-    }
-
-    /**
-     * (PHP 5 &gt;= 5.1.0)<br/>
-     * Constructs the object
-     *
-     * @link http://php.net/manual/en/serializable.unserialize.php
-     *
-     * @param string $serialized <p>
-     *                           The string representation of the object.
-     *                           </p>
-     */
-    public function unserialize($serialized)
-    {
-        $data = unserialize($serialized);
-
-        $this->name    = isset($data['name']) ? $data['name'] : null;
-        $this->mobile  = isset($data['mobile']) ? $data['mobile'] : false;
-        $this->desktop = isset($data['desktop']) ? $data['desktop'] : false;
-        $this->console = isset($data['console']) ? $data['console'] : false;
-        $this->tv      = isset($data['tv']) ? $data['tv'] : false;
-        $this->phone   = isset($data['phone']) ? $data['phone'] : false;
-        $this->tablet  = isset($data['tablet']) ? $data['tablet'] : false;
-    }
-
-    /**
-     * @return string
-     */
-    public function toJson()
-    {
-        return json_encode($this->toArray(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
-    }
-
-    /**
-     * @return array
-     */
-    public function toArray()
-    {
-        return [
-            'name'    => $this->name,
-            'mobile'  => $this->mobile,
-            'desktop' => $this->desktop,
-            'console' => $this->console,
-            'tv'      => $this->tv,
-            'phone'   => $this->phone,
-            'tablet'  => $this->tablet,
-        ];
     }
 }
