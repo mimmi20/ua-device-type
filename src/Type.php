@@ -107,7 +107,7 @@ class Type implements TypeInterface
      */
     public function __construct(
         $type,
-        $name,
+        $name = null,
         $mobile = false,
         $desktop = false,
         $console = false,
