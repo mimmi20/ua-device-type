@@ -1,5 +1,14 @@
 <?php
+/**
+ * This file is part of the ua-device-type package.
+ *
+ * Copyright (c) 2015-2017, Thomas Mueller <mimmi20@live.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
+declare(strict_types = 1);
 namespace UaDeviceTypeTest;
 
 use Cache\Adapter\Filesystem\FilesystemCachePool;
@@ -29,17 +38,11 @@ class TypeLoaderTest extends \PHPUnit_Framework_TestCase
         $this->object = new TypeLoader($cache);
     }
 
-    /**
-     *
-     */
     public function testHasUnknown()
     {
         self::assertTrue($this->object->has('unknown'));
     }
 
-    /**
-     *
-     */
     public function testLoadUnknown()
     {
         $type = $this->object->load('unknown');
