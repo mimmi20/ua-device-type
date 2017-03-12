@@ -19,7 +19,7 @@ use UaDeviceType\TypeLoader;
 /**
  * Test class for \BrowserDetector\Loader\BrowserLoader
  */
-class TypeLoaderTest extends \PHPUnit_Framework_TestCase
+class TypeLoaderTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \UaDeviceType\TypeLoader
@@ -51,12 +51,11 @@ class TypeLoaderTest extends \PHPUnit_Framework_TestCase
         self::assertNull($type->getName());
     }
 
-    /**
-     * @expectedException \BrowserDetector\Loader\NotFoundException
-     * @expectedExceptionMessage the device type with key "does not exist" was not found
-     */
     public function testLoadNotAvailable()
     {
+        $this->expectException('\BrowserDetector\Loader\NotFoundException');
+        $this->expectExceptionMessage('the device type with key "does not exist" was not found');
+
         $this->object->load('does not exist');
     }
 }

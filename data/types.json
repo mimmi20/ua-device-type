@@ -51,7 +51,7 @@
   },
   "feature-phone": {
     "type": "feature-phone",
-    "name": "Featurephone",
+    "name": "Feature Phone",
     "mobile": true,
     "desktop": false,
     "console": false,
