@@ -13,25 +13,23 @@ env:
   - COMPOSER_FLAGS="--prefer-lowest"
   - COMPOSER_FLAGS=""
 
-cache:
-  directories:
-    - $HOME/.composer/cache
-
 matrix:
   include:
-    # Use the newer stack for HHVM as HHVM does not support Precise anymore since a long time and so Precise has an outdated version
-    - php: hhvm
-      env: COMPOSER_FLAGS="--ignore-platform-reqs"
+    - php: 7.1
+      env: COVERAGE=yes
       sudo: required
       dist: trusty
       group: edge
-      cache: false
-    - php: 7.1
-      env: COVERAGE=yes
     - php: 7.1
       env: EXECUTE_CS_CHECK=yes
+    - php: nightly
+      env: COMPOSER_FLAGS="--ignore-platform-reqs"
   allow_failures:
     - php: nightly
+
+cache:
+  directories:
+    - $HOME/.composer/cache
 
 before_install:
   - if [[ $TRAVIS_PHP_VERSION != nightly && $COVERAGE != yes ]]; then phpenv config-rm xdebug.ini; fi
@@ -43,7 +41,8 @@ install:
   - travis_retry composer update --optimize-autoloader --prefer-dist --prefer-stable --no-progress --no-interaction $COMPOSER_FLAGS
 
 script:
-  - if [[ $COVERAGE == yes ]]; then vendor/bin/phpunit --colors=auto --coverage-clover=clover.xml; else vendor/bin/phpunit --no-coverage --colors=auto; fi
+  - composer validate
+  - if [[ $COVERAGE == yes ]]; then vendor/bin/phpunit --colors=auto --coverage-clover=clover.xml; else vendor/bin/phpunit --colors=auto --no-coverage; fi
   - if [[ $EXECUTE_CS_CHECK == yes ]]; then php -n -d memory_limit=768M vendor/bin/phpcs; fi
   - if [[ $EXECUTE_CS_CHECK == yes ]]; then php -n -d memory_limit=768M vendor/bin/php-cs-fixer fix --dry-run -vv; fi
 
