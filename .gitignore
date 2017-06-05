@@ -14,4 +14,5 @@ data/cache/
 error.log
 ergebnis.txt
 resources/browscap-*/
-cache/cache/
+cache/*
+!cache/.gitkeep
