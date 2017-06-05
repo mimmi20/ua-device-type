@@ -30,7 +30,7 @@ class TypeLoaderTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
-        $cache        = new FilesystemAdapter('', 0, __DIR__ . '/../cache/');
+        $cache = new FilesystemAdapter('', 0, __DIR__ . '/../cache/');
         $cache->clear();
         $this->object = new TypeLoader($cache);
     }
