@@ -11,7 +11,6 @@
 declare(strict_types = 1);
 namespace UaDeviceTypeTest;
 
-use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use UaDeviceType\TypeLoader;
 
 /**
@@ -30,9 +29,7 @@ class TypeLoaderTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
-        $cache = new FilesystemAdapter('', 0, __DIR__ . '/../cache/');
-        $cache->clear();
-        $this->object = new TypeLoader($cache);
+        $this->object = new TypeLoader();
     }
 
     public function testHasUnknown()
