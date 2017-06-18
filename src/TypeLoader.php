@@ -13,7 +13,6 @@ namespace UaDeviceType;
 
 use BrowserDetector\Loader\LoaderInterface;
 use BrowserDetector\Loader\NotFoundException;
-use Psr\Cache\CacheItemPoolInterface;
 
 /**
  * Browser detection class
@@ -27,17 +26,9 @@ use Psr\Cache\CacheItemPoolInterface;
 class TypeLoader implements LoaderInterface
 {
     /**
-     * @var \Psr\Cache\CacheItemPoolInterface|null
+     * @var \StdClass[]
      */
-    private $cache = null;
-
-    /**
-     * @param \Psr\Cache\CacheItemPoolInterface $cache
-     */
-    public function __construct(CacheItemPoolInterface $cache)
-    {
-        $this->cache = $cache;
-    }
+    private $types = [];
 
     /**
      * @param string $key
@@ -48,9 +39,7 @@ class TypeLoader implements LoaderInterface
     {
         $this->init();
 
-        $cacheItem = $this->cache->getItem(hash('sha512', 'device-type-cache-' . $key));
-
-        return $cacheItem->isHit();
+        return array_key_exists($key, $this->types);
     }
 
     /**
@@ -68,9 +57,7 @@ class TypeLoader implements LoaderInterface
             throw new NotFoundException('the device type with key "' . $key . '" was not found');
         }
 
-        $cacheItem = $this->cache->getItem(hash('sha512', 'device-type-cache-' . $key));
-
-        $type = $cacheItem->get();
+        $type = $this->types[$key];
 
         return new Type(
             $type->type,
@@ -89,22 +76,11 @@ class TypeLoader implements LoaderInterface
      */
     private function init()
     {
-        $cacheInitializedId = hash('sha512', 'device-type-cache is initialized');
-        $cacheInitialized   = $this->cache->getItem($cacheInitializedId);
-
-        if ($cacheInitialized->isHit() && $cacheInitialized->get()) {
-            return;
-        }
+        $this->types = [];
 
         foreach ($this->getTypes() as $key => $data) {
-            $cacheItem = $this->cache->getItem(hash('sha512', 'device-type-cache-' . $key));
-            $cacheItem->set($data);
-
-            $this->cache->save($cacheItem);
+            $this->types[$key] = $data;
         }
-
-        $cacheInitialized->set(true);
-        $this->cache->save($cacheInitialized);
     }
 
     /**
