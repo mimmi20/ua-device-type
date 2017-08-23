@@ -24,10 +24,10 @@ class TypeTest extends \PHPUnit\Framework\TestCase
         $name    = 'test1';
         $mobile  = true;
         $desktop = false;
-        $console = null;
-        $tv      = 2;
-        $phone   = [];
-        $tablet  = new \stdClass();
+        $console = false;
+        $tv      = true;
+        $phone   = true;
+        $tablet  = false;
 
         $result = new Type($type, $name, $mobile, $desktop, $console, $tv, $phone, $tablet);
 
@@ -35,9 +35,9 @@ class TypeTest extends \PHPUnit\Framework\TestCase
         self::assertSame($name, $result->getName());
         self::assertTrue($result->isMobile());
         self::assertFalse($result->isDesktop());
-        self::assertNull($result->isConsole());
-        self::assertSame($tv, $result->isTv());
-        self::assertSame($phone, $result->isPhone());
-        self::assertSame($tablet, $result->isTablet());
+        self::assertFalse($result->isConsole());
+        self::assertTrue($result->isTv());
+        self::assertTrue($result->isPhone());
+        self::assertFalse($result->isTablet());
     }
 }

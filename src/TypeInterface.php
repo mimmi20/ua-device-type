@@ -24,54 +24,54 @@ interface TypeInterface
      *
      * @return string
      */
-    public function getType();
+    public function getType(): string;
 
     /**
      * Returns the name of the device
      *
-     * @return string
+     * @return string|null
      */
-    public function getName();
+    public function getName(): ?string;
 
     /**
      * Returns True, if the Device is a mobile device
      *
      * @return bool
      */
-    public function isMobile();
+    public function isMobile(): bool;
 
     /**
      * Returns True, if the Device is a desktop device
      *
      * @return bool
      */
-    public function isDesktop();
+    public function isDesktop(): bool;
 
     /**
      * Returns True, if the Device is a console
      *
      * @return bool
      */
-    public function isConsole();
+    public function isConsole(): bool;
 
     /**
      * Returns True, if the Device is a tv device
      *
      * @return bool
      */
-    public function isTv();
+    public function isTv(): bool;
 
     /**
      * Returns True, if the Device is a mobile phone
      *
      * @return bool
      */
-    public function isPhone();
+    public function isPhone(): bool;
 
     /**
      * Returns True, if the Device is a tablet device
      *
      * @return bool
      */
-    public function isTablet();
+    public function isTablet(): bool;
 }

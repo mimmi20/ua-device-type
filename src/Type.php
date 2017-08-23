@@ -22,14 +22,14 @@ class Type implements TypeInterface
     /**
      * the type name of the device
      *
-     * @var string|null
+     * @var string
      */
     private $type = null;
 
     /**
      * the name of the device
      *
-     * @var string
+     * @var string|null
      */
     private $name = null;
 
@@ -76,24 +76,24 @@ class Type implements TypeInterface
     private $tablet = false;
 
     /**
-     * @param string $type
-     * @param string $name
-     * @param bool   $mobile
-     * @param bool   $desktop
-     * @param bool   $console
-     * @param bool   $tv
-     * @param bool   $phone
-     * @param bool   $tablet
+     * @param string      $type
+     * @param string|null $name
+     * @param bool        $mobile
+     * @param bool        $desktop
+     * @param bool        $console
+     * @param bool        $tv
+     * @param bool        $phone
+     * @param bool        $tablet
      */
     public function __construct(
-        $type,
-        $name = null,
-        $mobile = false,
-        $desktop = false,
-        $console = false,
-        $tv = false,
-        $phone = false,
-        $tablet = false
+        string $type,
+        ?string $name = null,
+        bool $mobile = false,
+        bool $desktop = false,
+        bool $console = false,
+        bool $tv = false,
+        bool $phone = false,
+        bool $tablet = false
     ) {
         $this->type    = $type;
         $this->name    = $name;
@@ -110,7 +110,7 @@ class Type implements TypeInterface
      *
      * @return string
      */
-    public function getType()
+    public function getType(): string
     {
         return $this->type;
     }
@@ -120,7 +120,7 @@ class Type implements TypeInterface
      *
      * @return string|null
      */
-    public function getName()
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -130,7 +130,7 @@ class Type implements TypeInterface
      *
      * @return bool
      */
-    public function isMobile()
+    public function isMobile(): bool
     {
         return $this->mobile;
     }
@@ -140,7 +140,7 @@ class Type implements TypeInterface
      *
      * @return bool
      */
-    public function isDesktop()
+    public function isDesktop(): bool
     {
         return $this->desktop;
     }
@@ -150,7 +150,7 @@ class Type implements TypeInterface
      *
      * @return bool
      */
-    public function isConsole()
+    public function isConsole(): bool
     {
         return $this->console;
     }
@@ -160,7 +160,7 @@ class Type implements TypeInterface
      *
      * @return bool
      */
-    public function isTv()
+    public function isTv(): bool
     {
         return $this->tv;
     }
@@ -170,7 +170,7 @@ class Type implements TypeInterface
      *
      * @return bool
      */
-    public function isPhone()
+    public function isPhone(): bool
     {
         return $this->phone;
     }
@@ -180,7 +180,7 @@ class Type implements TypeInterface
      *
      * @return bool
      */
-    public function isTablet()
+    public function isTablet(): bool
     {
         return $this->tablet;
     }
