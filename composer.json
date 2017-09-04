@@ -33,7 +33,8 @@
   "require-dev": {
     "phpunit/phpunit": "^6.2",
     "squizlabs/php_codesniffer": "^3.0",
-    "friendsofphp/php-cs-fixer": "^2.5"
+    "friendsofphp/php-cs-fixer": "^2.5",
+    "phpstan/phpstan": "^0.8"
   },
   "autoload": {
     "psr-4": {
