@@ -24,14 +24,14 @@ class Type implements TypeInterface
      *
      * @var string
      */
-    private $type = null;
+    private $type;
 
     /**
      * the name of the device
      *
      * @var string|null
      */
-    private $name = null;
+    private $name;
 
     /**
      * the Device is a mobile device
