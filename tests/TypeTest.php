@@ -18,7 +18,7 @@ class TypeTest extends \PHPUnit\Framework\TestCase
     /**
      * tests the constructor and the getter
      */
-    public function testSetterGetter()
+    public function testSetterGetter(): void
     {
         $type    = 'testType';
         $name    = 'test1';

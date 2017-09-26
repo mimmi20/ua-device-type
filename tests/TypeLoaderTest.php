@@ -21,23 +21,23 @@ class TypeLoaderTest extends \PHPUnit\Framework\TestCase
     /**
      * @var \UaDeviceType\TypeLoader
      */
-    private $object = null;
+    private $object;
 
     /**
      * Sets up the fixture, for example, open a network connection.
      * This method is called before a test is executed.
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->object = new TypeLoader();
     }
 
-    public function testHasUnknown()
+    public function testHasUnknown(): void
     {
         self::assertTrue($this->object->has('unknown'));
     }
 
-    public function testLoadUnknown()
+    public function testLoadUnknown(): void
     {
         $type = $this->object->load('unknown');
 
@@ -45,7 +45,7 @@ class TypeLoaderTest extends \PHPUnit\Framework\TestCase
         self::assertNull($type->getName());
     }
 
-    public function testLoadNotAvailable()
+    public function testLoadNotAvailable(): void
     {
         $this->expectException('\BrowserDetector\Loader\NotFoundException');
         $this->expectExceptionMessage('the device type with key "does not exist" was not found');
