@@ -17,6 +17,8 @@ class TypeTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * tests the constructor and the getter
+     *
+     * @return void
      */
     public function testSetterGetter(): void
     {

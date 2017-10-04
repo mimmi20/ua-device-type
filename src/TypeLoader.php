@@ -73,6 +73,8 @@ class TypeLoader implements LoaderInterface
 
     /**
      * initializes cache
+     *
+     * @return void
      */
     private function init(): void
     {
