@@ -26,17 +26,25 @@ class TypeLoaderTest extends \PHPUnit\Framework\TestCase
     /**
      * Sets up the fixture, for example, open a network connection.
      * This method is called before a test is executed.
+     *
+     * @return void
      */
     protected function setUp(): void
     {
         $this->object = new TypeLoader();
     }
 
+    /**
+     * @return void
+     */
     public function testHasUnknown(): void
     {
         self::assertTrue($this->object->has('unknown'));
     }
 
+    /**
+     * @return void
+     */
     public function testLoadUnknown(): void
     {
         $type = $this->object->load('unknown');
@@ -45,6 +53,9 @@ class TypeLoaderTest extends \PHPUnit\Framework\TestCase
         self::assertNull($type->getName());
     }
 
+    /**
+     * @return void
+     */
     public function testLoadNotAvailable(): void
     {
         $this->expectException('\BrowserDetector\Loader\NotFoundException');
