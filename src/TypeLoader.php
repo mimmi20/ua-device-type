@@ -31,6 +31,39 @@ class TypeLoader implements LoaderInterface
     private $types = [];
 
     /**
+     * @var self|null
+     */
+    private static $instance;
+
+    /**
+     * @return self
+     */
+    private function __construct()
+    {
+        // nothing to do here
+    }
+
+    /**
+     * @return self
+     */
+    public static function getInstance()
+    {
+        if (null === self::$instance) {
+            self::$instance = new self();
+        }
+
+        return self::$instance;
+    }
+
+    /**
+     * @return void
+     */
+    public static function resetInstance(): void
+    {
+        self::$instance = null;
+    }
+
+    /**
      * @param string $key
      *
      * @return bool

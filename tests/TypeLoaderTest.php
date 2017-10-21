@@ -31,7 +31,18 @@ class TypeLoaderTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp(): void
     {
-        $this->object = new TypeLoader();
+        $this->object = TypeLoader::getInstance();
+    }
+
+    /**
+     * Tears down the fixture, for example, close a network connection.
+     * This method is called after a test is executed.
+     *
+     * @return void
+     */
+    protected function tearDown(): void
+    {
+        TypeLoader::resetInstance();
     }
 
     /**
