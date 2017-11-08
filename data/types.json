@@ -106,7 +106,7 @@
     "desktop": false,
     "console": false,
     "tv": false,
-    "phone": false,
+    "phone": true,
     "tablet": false
   },
   "phablet": {
@@ -116,8 +116,8 @@
     "desktop": false,
     "console": false,
     "tv": false,
-    "phone": false,
-    "tablet": true
+    "phone": true,
+    "tablet": false
   },
   "smartphone": {
     "type": "smartphone",
@@ -126,7 +126,7 @@
     "desktop": false,
     "console": false,
     "tv": false,
-    "phone": false,
+    "phone": true,
     "tablet": false
   },
   "tablet": {
@@ -136,7 +136,7 @@
     "desktop": false,
     "console": false,
     "tv": false,
-    "phone": true,
+    "phone": false,
     "tablet": true
   },
   "tv": {
