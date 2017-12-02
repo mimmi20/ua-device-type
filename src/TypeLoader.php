@@ -119,14 +119,14 @@ class TypeLoader implements LoaderInterface
     }
 
     /**
-     * @return array[]
+     * @return \Generator|\stdClass[]
      */
     private function getTypes(): \Generator
     {
         static $types = null;
 
         if (null === $types) {
-            $types = json_decode(file_get_contents(__DIR__ . '/../data/types.json'));
+            $types = json_decode(file_get_contents(__DIR__ . '/../data/types.json'), false);
         }
 
         foreach ($types as $key => $data) {

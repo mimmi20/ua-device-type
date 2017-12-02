@@ -16,3 +16,4 @@ ergebnis.txt
 resources/browscap-*/
 cache/*
 !cache/.gitkeep
+.php_cs.cache
