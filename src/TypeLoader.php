@@ -26,7 +26,7 @@ use BrowserDetector\Loader\NotFoundException;
 class TypeLoader implements LoaderInterface
 {
     /**
-     * @var \StdClass[]
+     * @var \stdClass[]
      */
     private $types = [];
 
