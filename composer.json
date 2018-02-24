@@ -1,8 +1,7 @@
 {
   "name": "mimmi20/ua-device-type",
-  "description": "a class collection for different device types",
   "type": "library",
-  "license": "MIT",
+  "description": "a class collection for different device types",
   "keywords": [
     "Browser",
     "user agent",
@@ -11,6 +10,7 @@
     "user-agent"
   ],
   "homepage": "https://github.com/mimmi20/ua-device-type",
+  "license": "MIT",
   "authors": [
     {
       "name": "Thomas Müller",
@@ -22,19 +22,16 @@
       "homepage": "https://github.com/mimmi20/ua-device-type/graphs/contributors"
     }
   ],
-  "support": {
-    "issues": "https://github.com/mimmi20/ua-device-type/issues",
-    "source": "https://github.com/mimmi20/ua-device-type"
-  },
   "require": {
     "php": "^7.1",
     "mimmi20/browser-detector-loader-interface": "~2.0.5"
   },
   "require-dev": {
-    "phpunit/phpunit": "^6.5",
-    "squizlabs/php_codesniffer": "^3.2",
     "friendsofphp/php-cs-fixer": "^2.9",
-    "phpstan/phpstan": "^0.9"
+    "localheinz/composer-normalize": "^0.6.0",
+    "phpstan/phpstan": "^0.9",
+    "phpunit/phpunit": "^6.5",
+    "squizlabs/php_codesniffer": "^3.2"
   },
   "autoload": {
     "psr-4": {
@@ -45,5 +42,9 @@
     "psr-4": {
       "UaDeviceTypeTest\\": "tests/"
     }
+  },
+  "support": {
+    "issues": "https://github.com/mimmi20/ua-device-type/issues",
+    "source": "https://github.com/mimmi20/ua-device-type"
   }
 }
