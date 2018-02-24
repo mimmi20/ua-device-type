@@ -72,7 +72,7 @@
         <exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine"/>
     </rule>
     <rule ref="Generic.NamingConventions.ConstructorName"/>
-    
+
     <rule ref="PSR2">
         <exclude name="Generic.Files.LineLength.TooLong"/><!-- can not be suppressed -->
         <exclude name="PEAR.Functions.ValidDefaultValue"/><!-- we want to allow null as "default" value -->
@@ -86,7 +86,7 @@
             <property name="ignoreBlankLines" value="false"/>
         </properties>
     </rule>
-    
+
     <rule ref="Squiz.Commenting.FunctionComment.Missing"/>
     <rule ref="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing"/>
     <rule ref="Squiz.Commenting.FunctionComment.MissingReturn"/>

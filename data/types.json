@@ -49,6 +49,16 @@
     "phone": false,
     "tablet": false
   },
+  "ebook-reader": {
+    "type": "ebook-reader",
+    "name": "Ebook Reader",
+    "mobile": true,
+    "desktop": false,
+    "console": false,
+    "tv": false,
+    "phone": false,
+    "tablet": false
+  },
   "feature-phone": {
     "type": "feature-phone",
     "name": "Feature Phone",
