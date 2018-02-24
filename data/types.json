@@ -81,7 +81,7 @@
   },
   "mobile-console": {
     "type": "mobile-console",
-    "name": "Mobile Device",
+    "name": "Console",
     "mobile": true,
     "desktop": false,
     "console": true,
