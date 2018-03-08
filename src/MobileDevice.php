@@ -22,47 +22,47 @@ final class MobileDevice implements TypeInterface
      *
      * @var string|null
      */
-    public const NAME = 'Mobile Device';
+    private const NAME = 'Mobile Device';
 
     /**
      * the Device is a mobile device
      *
      * @var bool
      */
-    public const MOBILE = true;
+    private const MOBILE = true;
 
     /**
      * the Device is a desktop device
      *
      * @var bool
      */
-    public const DESKTOP = false;
+    private const DESKTOP = false;
 
     /**
      * the Device is a console
      *
      * @var bool
      */
-    public const CONSOLE = false;
+    private const CONSOLE = false;
 
     /**
      * the Device is a tv device
      *
      * @var bool
      */
-    public const TV = false;
+    private const TV = false;
 
     /**
      * the Device is a mobile phone
      *
      * @var bool
      */
-    public const PHONE = false;
+    private const PHONE = false;
 
     /**
      * the Device is a tablet device
      *
      * @var bool
      */
-    public const TABLET = false;
+    private const TABLET = false;
 }

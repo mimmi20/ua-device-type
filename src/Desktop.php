@@ -22,47 +22,47 @@ final class Desktop implements TypeInterface
      *
      * @var string|null
      */
-    public const NAME = 'Desktop';
+    private const NAME = 'Desktop';
 
     /**
      * the Device is a mobile device
      *
      * @var bool
      */
-    public const MOBILE = false;
+    private const MOBILE = false;
 
     /**
      * the Device is a desktop device
      *
      * @var bool
      */
-    public const DESKTOP = true;
+    private const DESKTOP = true;
 
     /**
      * the Device is a console
      *
      * @var bool
      */
-    public const CONSOLE = false;
+    private const CONSOLE = false;
 
     /**
      * the Device is a tv device
      *
      * @var bool
      */
-    public const TV = false;
+    private const TV = false;
 
     /**
      * the Device is a mobile phone
      *
      * @var bool
      */
-    public const PHONE = false;
+    private const PHONE = false;
 
     /**
      * the Device is a tablet device
      *
      * @var bool
      */
-    public const TABLET = false;
+    private const TABLET = false;
 }
