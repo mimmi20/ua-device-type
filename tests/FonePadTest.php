@@ -11,9 +11,10 @@
 declare(strict_types = 1);
 namespace UaDeviceTypeTest;
 
-use UaDeviceType\Type;
+use PHPUnit\Framework\TestCase;
+use UaDeviceType\FonePad;
 
-class TypeTest extends \PHPUnit\Framework\TestCase
+class FonePadTest extends TestCase
 {
     /**
      * tests the constructor and the getter
@@ -22,24 +23,18 @@ class TypeTest extends \PHPUnit\Framework\TestCase
      */
     public function testSetterGetter(): void
     {
-        $type    = 'testType';
-        $name    = 'test1';
-        $mobile  = true;
-        $desktop = false;
-        $console = false;
-        $tv      = true;
-        $phone   = true;
-        $tablet  = false;
+        $type = 'fone-pad';
+        $name = 'FonePad';
 
-        $result = new Type($type, $name, $mobile, $desktop, $console, $tv, $phone, $tablet);
+        $result = new FonePad();
 
         self::assertSame($type, $result->getType());
         self::assertSame($name, $result->getName());
         self::assertTrue($result->isMobile());
         self::assertFalse($result->isDesktop());
         self::assertFalse($result->isConsole());
-        self::assertTrue($result->isTv());
+        self::assertFalse($result->isTv());
         self::assertTrue($result->isPhone());
-        self::assertFalse($result->isTablet());
+        self::assertTrue($result->isTablet());
     }
 }
