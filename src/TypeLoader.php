@@ -39,11 +39,13 @@ class TypeLoader implements LoaderInterface
         MobilePhone::TYPE            => MobilePhone::class,
         Phablet::TYPE                => Phablet::class,
         Smartphone::TYPE             => Smartphone::class,
+        Speaker::TYPE                => Speaker::class,
         Tablet::TYPE                 => Tablet::class,
         Tv::TYPE                     => Tv::class,
         TvConsole::TYPE              => TvConsole::class,
         TvMediaPlayer::TYPE          => TvMediaPlayer::class,
         Unknown::TYPE                => Unknown::class,
+        Watch::TYPE                  => Watch::class,
     ];
 
     /**
