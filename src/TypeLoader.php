@@ -22,10 +22,11 @@ use BrowserDetector\Loader\NotFoundException;
  * @copyright 2012-2016 Thomas Mueller
  * @license   http://www.opensource.org/licenses/MIT MIT License
  */
-class TypeLoader implements LoaderInterface
+final class TypeLoader implements LoaderInterface
 {
     private const OPTIONS = [
         Bot::TYPE                    => Bot::class,
+        Car::TYPE                    => Car::class,
         CarEntertainmentSystem::TYPE => CarEntertainmentSystem::class,
         Console::TYPE                => Console::class,
         Desktop::TYPE                => Desktop::class,

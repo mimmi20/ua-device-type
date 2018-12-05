@@ -14,7 +14,7 @@ namespace UaDeviceTypeTest;
 use PHPUnit\Framework\TestCase;
 use UaDeviceType\FonePad;
 
-class FonePadTest extends TestCase
+final class FonePadTest extends TestCase
 {
     /**
      * tests the constructor and the getter

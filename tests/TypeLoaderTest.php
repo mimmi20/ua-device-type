@@ -18,7 +18,7 @@ use UaDeviceType\Unknown;
 /**
  * Test class for \BrowserDetector\Loader\BrowserLoader
  */
-class TypeLoaderTest extends TestCase
+final class TypeLoaderTest extends TestCase
 {
     /**
      * @var \UaDeviceType\TypeLoader
