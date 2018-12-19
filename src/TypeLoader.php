@@ -11,18 +11,9 @@
 declare(strict_types = 1);
 namespace UaDeviceType;
 
-use BrowserDetector\Loader\LoaderInterface;
 use BrowserDetector\Loader\NotFoundException;
 
-/**
- * Browser detection class
- *
- * @category  BrowserDetector
- *
- * @copyright 2012-2016 Thomas Mueller
- * @license   http://www.opensource.org/licenses/MIT MIT License
- */
-final class TypeLoader implements LoaderInterface
+final class TypeLoader implements TypeLoaderInterface
 {
     private const OPTIONS = [
         Bot::TYPE                    => Bot::class,
