@@ -17,6 +17,8 @@ final class TypeLoader implements TypeLoaderInterface
 {
     private const OPTIONS = [
         Bot::TYPE                    => Bot::class,
+        Brailledisplay::TYPE         => Brailledisplay::class,
+        Brailletouch::TYPE           => Brailletouch::class,
         Car::TYPE                    => Car::class,
         CarEntertainmentSystem::TYPE => CarEntertainmentSystem::class,
         Console::TYPE                => Console::class,
