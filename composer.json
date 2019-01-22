@@ -39,6 +39,10 @@
     "phpunit/phpunit": "^7.5",
     "squizlabs/php_codesniffer": "^3.4"
   },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
   "autoload": {
     "psr-4": {
       "UaDeviceType\\": "src/"
@@ -49,6 +53,8 @@
       "UaDeviceTypeTest\\": "tests/"
     }
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "support": {
     "issues": "https://github.com/mimmi20/ua-device-type/issues",
     "source": "https://github.com/mimmi20/ua-device-type"
