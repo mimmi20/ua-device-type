@@ -11,6 +11,7 @@
 declare(strict_types = 1);
 namespace UaDeviceTypeTest;
 
+use BrowserDetector\Loader\NotFoundException;
 use PHPUnit\Framework\TestCase;
 use UaDeviceType\TypeLoader;
 use UaDeviceType\Unknown;
@@ -65,7 +66,7 @@ final class TypeLoaderTest extends TestCase
      */
     public function testLoadNotAvailable(): void
     {
-        $this->expectException(\BrowserDetector\Loader\NotFoundException::class);
+        $this->expectException(NotFoundException::class);
         $this->expectExceptionMessage('the device type with key "does not exist" was not found');
 
         $this->object->load('does not exist');
