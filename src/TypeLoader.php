@@ -32,6 +32,7 @@ final class TypeLoader implements TypeLoaderInterface
         MobileMediaPlayer::TYPE      => MobileMediaPlayer::class,
         MobilePhone::TYPE            => MobilePhone::class,
         Phablet::TYPE                => Phablet::class,
+        Printer::TYPE                => Printer::class,
         Smartphone::TYPE             => Smartphone::class,
         Speaker::TYPE                => Speaker::class,
         Tablet::TYPE                 => Tablet::class,
