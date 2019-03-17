@@ -27,6 +27,7 @@ final class TypeLoader implements TypeLoaderInterface
         EbookReader::TYPE            => EbookReader::class,
         FeaturePhone::TYPE           => FeaturePhone::class,
         FonePad::TYPE                => FonePad::class,
+        FridgeFreezer::TYPE          => FridgeFreezer::class,
         MobileConsole::TYPE          => MobileConsole::class,
         MobileDevice::TYPE           => MobileDevice::class,
         MobileMediaPlayer::TYPE      => MobileMediaPlayer::class,
