@@ -28,6 +28,7 @@ final class TypeLoader implements TypeLoaderInterface
         FeaturePhone::TYPE           => FeaturePhone::class,
         FonePad::TYPE                => FonePad::class,
         FridgeFreezer::TYPE          => FridgeFreezer::class,
+        Laptop::TYPE                 => Laptop::class,
         MobileConsole::TYPE          => MobileConsole::class,
         MobileDevice::TYPE           => MobileDevice::class,
         MobileMediaPlayer::TYPE      => MobileMediaPlayer::class,
@@ -41,7 +42,10 @@ final class TypeLoader implements TypeLoaderInterface
         Tv::TYPE                     => Tv::class,
         TvConsole::TYPE              => TvConsole::class,
         TvMediaPlayer::TYPE          => TvMediaPlayer::class,
+        TvSettopBox::TYPE            => TvSettopBox::class,
+        TvStick::TYPE                => TvStick::class,
         Unknown::TYPE                => Unknown::class,
+        VideoPhone::TYPE             => VideoPhone::class,
         Watch::TYPE                  => Watch::class,
     ];
 

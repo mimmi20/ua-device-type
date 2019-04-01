@@ -25,44 +25,51 @@ final class MobileDevice implements TypeInterface
     private const NAME = 'Mobile Device';
 
     /**
-     * the Device is a mobile device
+     * the device is a mobile device
      *
      * @var bool
      */
     private const MOBILE = true;
 
     /**
-     * the Device is a desktop device
+     * the device is a desktop device
      *
      * @var bool
      */
     private const DESKTOP = false;
 
     /**
-     * the Device is a console
+     * the device is a gaming device
      *
      * @var bool
      */
     private const CONSOLE = false;
 
     /**
-     * the Device is a tv device
+     * the device is a tv device
      *
      * @var bool
      */
     private const TV = false;
 
     /**
-     * the Device is a mobile phone
+     * the device is a phone device
      *
      * @var bool
      */
     private const PHONE = false;
 
     /**
-     * the Device is a tablet device
+     * the device is a tablet device
      *
      * @var bool
      */
     private const TABLET = false;
+
+    /**
+     * description for the device
+     *
+     * @var string
+     */
+    private const DESCRIPTION = 'a general mobile device with its own screen without the ability to make phone calls';
 }

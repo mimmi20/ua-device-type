@@ -36,5 +36,9 @@ final class FonePadTest extends TestCase
         self::assertFalse($result->isTv());
         self::assertTrue($result->isPhone());
         self::assertTrue($result->isTablet());
+        self::assertSame(
+            'a mobile device with its own screen (greater than 7") which are able to make phone calls',
+            $result->getDescription()
+        );
     }
 }
