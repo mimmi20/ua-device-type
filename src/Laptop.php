@@ -11,18 +11,18 @@
 declare(strict_types = 1);
 namespace UaDeviceType;
 
-final class TvConsole implements TypeInterface
+final class Laptop implements TypeInterface
 {
     use DeviceType;
 
-    public const TYPE = 'tv-console';
+    public const TYPE = 'laptop';
 
     /**
      * the name of the device
      *
      * @var string|null
      */
-    private const NAME = 'TV Console';
+    private const NAME = 'Laptop';
 
     /**
      * the device is a mobile device
@@ -36,21 +36,21 @@ final class TvConsole implements TypeInterface
      *
      * @var bool
      */
-    private const DESKTOP = false;
+    private const DESKTOP = true;
 
     /**
      * the device is a gaming device
      *
      * @var bool
      */
-    private const CONSOLE = true;
+    private const CONSOLE = false;
 
     /**
      * the device is a tv device
      *
      * @var bool
      */
-    private const TV = true;
+    private const TV = false;
 
     /**
      * the device is a phone device
@@ -71,5 +71,5 @@ final class TvConsole implements TypeInterface
      *
      * @var string
      */
-    private const DESCRIPTION = 'a non-mobile device which uses a tv as screen, mainly used for gaming';
+    private const DESCRIPTION = 'a non-mobile device with its own screen';
 }

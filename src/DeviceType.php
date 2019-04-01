@@ -34,7 +34,7 @@ trait DeviceType
     }
 
     /**
-     * Returns True, if the Device is a mobile device
+     * Returns True, if the device is a mobile device
      *
      * @return bool
      */
@@ -44,7 +44,7 @@ trait DeviceType
     }
 
     /**
-     * Returns True, if the Device is a desktop device
+     * Returns True, if the device is a desktop device
      *
      * @return bool
      */
@@ -54,7 +54,7 @@ trait DeviceType
     }
 
     /**
-     * Returns True, if the Device is a console
+     * Returns True, if the device is a gaming device
      *
      * @return bool
      */
@@ -64,7 +64,7 @@ trait DeviceType
     }
 
     /**
-     * Returns True, if the Device is a tv device
+     * Returns True, if the device is a tv device
      *
      * @return bool
      */
@@ -74,7 +74,7 @@ trait DeviceType
     }
 
     /**
-     * Returns True, if the Device is a mobile phone
+     * Returns True, if the device is a phone device
      *
      * @return bool
      */
@@ -84,12 +84,22 @@ trait DeviceType
     }
 
     /**
-     * Returns True, if the Device is a tablet device
+     * Returns True, if the device is a tablet device
      *
      * @return bool
      */
     public function isTablet(): bool
     {
         return self::TABLET;
+    }
+
+    /**
+     * Returns a description for the device
+     *
+     * @return string
+     */
+    public function getDescription(): string
+    {
+        return self::DESCRIPTION;
     }
 }
