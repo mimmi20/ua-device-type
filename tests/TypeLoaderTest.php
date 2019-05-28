@@ -35,33 +35,45 @@ final class TypeLoaderTest extends TestCase
     }
 
     /**
+     * @throws \PHPUnit\Framework\ExpectationFailedException
+     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+     *
      * @return void
      */
     public function testHasUnknown(): void
     {
-        self::assertTrue($this->object->has('unknown'));
+        static::assertTrue($this->object->has('unknown'));
     }
 
     /**
+     * @throws \PHPUnit\Framework\ExpectationFailedException
+     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+     *
      * @return void
      */
     public function testHasNotWong(): void
     {
-        self::assertFalse($this->object->has('does not exist'));
+        static::assertFalse($this->object->has('does not exist'));
     }
 
     /**
+     * @throws \PHPUnit\Framework\ExpectationFailedException
+     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+     * @throws \BrowserDetector\Loader\NotFoundException
+     *
      * @return void
      */
     public function testLoadUnknown(): void
     {
         $type = $this->object->load('unknown');
 
-        self::assertInstanceOf(Unknown::class, $type);
-        self::assertNull($type->getName());
+        static::assertInstanceOf(Unknown::class, $type);
+        static::assertNull($type->getName());
     }
 
     /**
+     * @throws \BrowserDetector\Loader\NotFoundException
+     *
      * @return void
      */
     public function testLoadNotAvailable(): void
