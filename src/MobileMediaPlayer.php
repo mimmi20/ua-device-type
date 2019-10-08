@@ -22,7 +22,7 @@ final class MobileMediaPlayer implements TypeInterface
      *
      * @var string|null
      */
-    private const NAME = 'Media Player';
+    private const NAME = 'Mobile Media Player';
 
     /**
      * the device is a mobile device

@@ -29,7 +29,7 @@ final class SmartDisplay implements TypeInterface
      *
      * @var bool
      */
-    private const MOBILE = true;
+    private const MOBILE = false;
 
     /**
      * the device is a desktop device
