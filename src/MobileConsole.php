@@ -22,7 +22,7 @@ final class MobileConsole implements TypeInterface
      *
      * @var string|null
      */
-    private const NAME = 'Console';
+    private const NAME = 'Mobile Console';
 
     /**
      * the device is a mobile device
