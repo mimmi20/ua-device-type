@@ -31,15 +31,15 @@ final class FonePadTest extends TestCase
 
         $result = new FonePad();
 
-        static::assertSame($type, $result->getType());
-        static::assertSame($name, $result->getName());
-        static::assertTrue($result->isMobile());
-        static::assertFalse($result->isDesktop());
-        static::assertFalse($result->isConsole());
-        static::assertFalse($result->isTv());
-        static::assertTrue($result->isPhone());
-        static::assertTrue($result->isTablet());
-        static::assertSame(
+        self::assertSame($type, $result->getType());
+        self::assertSame($name, $result->getName());
+        self::assertTrue($result->isMobile());
+        self::assertFalse($result->isDesktop());
+        self::assertFalse($result->isConsole());
+        self::assertFalse($result->isTv());
+        self::assertTrue($result->isPhone());
+        self::assertTrue($result->isTablet());
+        self::assertSame(
             'a mobile device with its own screen (greater than 7") which are able to make phone calls',
             $result->getDescription()
         );
