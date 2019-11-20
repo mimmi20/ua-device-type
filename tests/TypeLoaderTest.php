@@ -42,7 +42,7 @@ final class TypeLoaderTest extends TestCase
      */
     public function testHasUnknown(): void
     {
-        static::assertTrue($this->object->has('unknown'));
+        self::assertTrue($this->object->has('unknown'));
     }
 
     /**
@@ -53,7 +53,7 @@ final class TypeLoaderTest extends TestCase
      */
     public function testHasNotWong(): void
     {
-        static::assertFalse($this->object->has('does not exist'));
+        self::assertFalse($this->object->has('does not exist'));
     }
 
     /**
@@ -67,8 +67,8 @@ final class TypeLoaderTest extends TestCase
     {
         $type = $this->object->load('unknown');
 
-        static::assertInstanceOf(Unknown::class, $type);
-        static::assertNull($type->getName());
+        self::assertInstanceOf(Unknown::class, $type);
+        self::assertNull($type->getName());
     }
 
     /**
