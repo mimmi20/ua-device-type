@@ -24,7 +24,7 @@
   ],
   "require": {
     "php": "^7.1",
-    "mimmi20/browser-detector-loader-interface": "~3.0.0"
+    "mimmi20/browser-detector-loader-interface": "~3.0.2"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^2.16.0",
