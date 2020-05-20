@@ -19,57 +19,41 @@ final class Tablet implements TypeInterface
 
     /**
      * the name of the device
-     *
-     * @var string|null
      */
     private const NAME = 'Tablet';
 
     /**
      * the device is a mobile device
-     *
-     * @var bool
      */
     private const MOBILE = true;
 
     /**
      * the device is a desktop device
-     *
-     * @var bool
      */
     private const DESKTOP = false;
 
     /**
      * the device is a gaming device
-     *
-     * @var bool
      */
     private const CONSOLE = false;
 
     /**
      * the device is a tv device
-     *
-     * @var bool
      */
     private const TV = false;
 
     /**
      * the device is a phone device
-     *
-     * @var bool
      */
     private const PHONE = false;
 
     /**
      * the device is a tablet device
-     *
-     * @var bool
      */
     private const TABLET = true;
 
     /**
      * description for the device
-     *
-     * @var string
      */
     private const DESCRIPTION = 'a mobile device with its own screen (greater than 7") which are not able to make phone calls';
 }

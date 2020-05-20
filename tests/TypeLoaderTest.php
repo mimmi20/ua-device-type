@@ -18,9 +18,7 @@ use UaDeviceType\Unknown;
 
 final class TypeLoaderTest extends TestCase
 {
-    /**
-     * @var \UaDeviceType\TypeLoader
-     */
+    /** @var \UaDeviceType\TypeLoader */
     private $object;
 
     /**
