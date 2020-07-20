@@ -19,4 +19,7 @@ tests/temp/*.php
 tests/temp/*.ini
 .php_cs.cache
 clover.xml
+.phplint-cache
+.phpunit.result.cache
 infection-*.log
+rewrite*.php
