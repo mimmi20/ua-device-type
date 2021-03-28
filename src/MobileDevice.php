@@ -9,6 +9,7 @@
  */
 
 declare(strict_types = 1);
+
 namespace UaDeviceType;
 
 final class MobileDevice implements TypeInterface

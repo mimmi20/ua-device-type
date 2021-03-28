@@ -9,9 +9,12 @@
  */
 
 declare(strict_types = 1);
+
 namespace UaDeviceType;
 
 use BrowserDetector\Loader\NotFoundException;
+
+use function array_key_exists;
 
 final class TypeLoader implements TypeLoaderInterface
 {
@@ -51,22 +54,13 @@ final class TypeLoader implements TypeLoaderInterface
         Watch::TYPE => Watch::class,
     ];
 
-    /**
-     * @param string $key
-     *
-     * @return bool
-     */
     public function has(string $key): bool
     {
         return array_key_exists($key, self::OPTIONS);
     }
 
     /**
-     * @param string $key
-     *
-     * @throws \BrowserDetector\Loader\NotFoundException
-     *
-     * @return \UaDeviceType\TypeInterface
+     * @throws NotFoundException
      */
     public function load(string $key): TypeInterface
     {

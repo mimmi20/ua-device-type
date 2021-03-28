@@ -9,18 +9,16 @@
  */
 
 declare(strict_types = 1);
+
 namespace UaDeviceType;
 
 use BrowserDetector\Loader\LoaderInterface;
+use BrowserDetector\Loader\NotFoundException;
 
 interface TypeLoaderInterface extends LoaderInterface
 {
     /**
-     * @param string $key
-     *
-     * @throws \BrowserDetector\Loader\NotFoundException
-     *
-     * @return \UaDeviceType\TypeInterface
+     * @throws NotFoundException
      */
     public function load(string $key): TypeInterface;
 }

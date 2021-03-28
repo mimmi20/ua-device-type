@@ -9,9 +9,12 @@
  */
 
 declare(strict_types = 1);
+
 namespace UaDeviceTypeTest;
 
+use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\TestCase;
+use SebastianBergmann\RecursionContext\InvalidArgumentException;
 use UaDeviceType\FonePad;
 
 final class FonePadTest extends TestCase
@@ -19,10 +22,8 @@ final class FonePadTest extends TestCase
     /**
      * tests the constructor and the getter
      *
-     * @throws \PHPUnit\Framework\ExpectationFailedException
-     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
-     *
-     * @return void
+     * @throws ExpectationFailedException
+     * @throws InvalidArgumentException
      */
     public function testSetterGetter(): void
     {

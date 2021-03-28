@@ -9,6 +9,7 @@
  */
 
 declare(strict_types = 1);
+
 namespace UaDeviceType;
 
 final class TvConsole implements TypeInterface

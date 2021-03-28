@@ -9,23 +9,24 @@
  */
 
 declare(strict_types = 1);
+
 namespace UaDeviceTypeTest;
 
 use BrowserDetector\Loader\NotFoundException;
+use PHPUnit\Framework\Exception;
+use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\TestCase;
+use SebastianBergmann\RecursionContext\InvalidArgumentException;
 use UaDeviceType\TypeLoader;
 use UaDeviceType\Unknown;
 
 final class TypeLoaderTest extends TestCase
 {
-    /** @var \UaDeviceType\TypeLoader */
-    private $object;
+    private TypeLoader $object;
 
     /**
      * Sets up the fixture, for example, open a network connection.
      * This method is called before a test is executed.
-     *
-     * @return void
      */
     protected function setUp(): void
     {
@@ -33,10 +34,8 @@ final class TypeLoaderTest extends TestCase
     }
 
     /**
-     * @throws \PHPUnit\Framework\ExpectationFailedException
-     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
-     *
-     * @return void
+     * @throws ExpectationFailedException
+     * @throws InvalidArgumentException
      */
     public function testHasUnknown(): void
     {
@@ -44,10 +43,8 @@ final class TypeLoaderTest extends TestCase
     }
 
     /**
-     * @throws \PHPUnit\Framework\ExpectationFailedException
-     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
-     *
-     * @return void
+     * @throws ExpectationFailedException
+     * @throws InvalidArgumentException
      */
     public function testHasNotWong(): void
     {
@@ -55,11 +52,9 @@ final class TypeLoaderTest extends TestCase
     }
 
     /**
-     * @throws \PHPUnit\Framework\Exception
-     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
-     * @throws \BrowserDetector\Loader\NotFoundException
-     *
-     * @return void
+     * @throws Exception
+     * @throws InvalidArgumentException
+     * @throws NotFoundException
      */
     public function testLoadUnknown(): void
     {
@@ -70,9 +65,7 @@ final class TypeLoaderTest extends TestCase
     }
 
     /**
-     * @throws \BrowserDetector\Loader\NotFoundException
-     *
-     * @return void
+     * @throws NotFoundException
      */
     public function testLoadNotAvailable(): void
     {
