@@ -9,14 +9,13 @@
  */
 
 declare(strict_types = 1);
+
 namespace UaDeviceType;
 
 trait DeviceType
 {
     /**
      * Returns the type name of the device
-     *
-     * @return string
      */
     public function getType(): string
     {
@@ -25,8 +24,6 @@ trait DeviceType
 
     /**
      * Returns the name of the type
-     *
-     * @return string|null
      */
     public function getName(): ?string
     {
@@ -35,8 +32,6 @@ trait DeviceType
 
     /**
      * Returns True, if the device is a mobile device
-     *
-     * @return bool
      */
     public function isMobile(): bool
     {
@@ -45,8 +40,6 @@ trait DeviceType
 
     /**
      * Returns True, if the device is a desktop device
-     *
-     * @return bool
      */
     public function isDesktop(): bool
     {
@@ -55,8 +48,6 @@ trait DeviceType
 
     /**
      * Returns True, if the device is a gaming device
-     *
-     * @return bool
      */
     public function isConsole(): bool
     {
@@ -65,8 +56,6 @@ trait DeviceType
 
     /**
      * Returns True, if the device is a tv device
-     *
-     * @return bool
      */
     public function isTv(): bool
     {
@@ -75,8 +64,6 @@ trait DeviceType
 
     /**
      * Returns True, if the device is a phone device
-     *
-     * @return bool
      */
     public function isPhone(): bool
     {
@@ -85,8 +72,6 @@ trait DeviceType
 
     /**
      * Returns True, if the device is a tablet device
-     *
-     * @return bool
      */
     public function isTablet(): bool
     {
@@ -95,8 +80,6 @@ trait DeviceType
 
     /**
      * Returns a description for the device
-     *
-     * @return string
      */
     public function getDescription(): string
     {
