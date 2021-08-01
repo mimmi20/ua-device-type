@@ -12,10 +12,9 @@ declare(strict_types = 1);
 
 namespace UaDeviceType;
 
-interface TypeLoaderInterface
+use UnexpectedValueException;
+
+final class NotFoundException extends UnexpectedValueException
 {
-    /**
-     * @throws NotFoundException
-     */
-    public function load(string $key): TypeInterface;
+    // nothing to do here
 }
