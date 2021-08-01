@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of the ua-device-type package.
+ * This file is part of the browser-detector-loader-interface package.
  *
  * Copyright (c) 2015-2021, Thomas Mueller <mimmi20@live.de>
  *
@@ -12,10 +12,9 @@ declare(strict_types = 1);
 
 namespace UaDeviceType;
 
-interface TypeLoaderInterface
+use UnexpectedValueException;
+
+final class NotFoundException extends UnexpectedValueException
 {
-    /**
-     * @throws NotFoundException
-     */
-    public function load(string $key): TypeInterface;
+    // nothing to do here
 }

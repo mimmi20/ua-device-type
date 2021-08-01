@@ -12,11 +12,11 @@ declare(strict_types = 1);
 
 namespace UaDeviceTypeTest;
 
-use BrowserDetector\Loader\NotFoundException;
 use PHPUnit\Framework\Exception;
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\TestCase;
 use SebastianBergmann\RecursionContext\InvalidArgumentException;
+use UaDeviceType\NotFoundException;
 use UaDeviceType\TypeLoader;
 use UaDeviceType\Unknown;
 
