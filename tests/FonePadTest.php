@@ -19,6 +19,9 @@ use UaDeviceType\FonePad;
 
 final class FonePadTest extends TestCase
 {
+    private const TYPE = 'fone-pad';
+    private const NAME = 'FonePad';
+
     /**
      * tests the constructor and the getter
      *
@@ -27,13 +30,10 @@ final class FonePadTest extends TestCase
      */
     public function testSetterGetter(): void
     {
-        $type = 'fone-pad';
-        $name = 'FonePad';
-
         $result = new FonePad();
 
-        self::assertSame($type, $result->getType());
-        self::assertSame($name, $result->getName());
+        self::assertSame(self::TYPE, $result->getType());
+        self::assertSame(self::NAME, $result->getName());
         self::assertTrue($result->isMobile());
         self::assertFalse($result->isDesktop());
         self::assertFalse($result->isConsole());
