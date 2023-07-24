@@ -2,7 +2,7 @@
 /**
  * This file is part of the ua-device-type package.
  *
- * Copyright (c) 2015-2021, Thomas Mueller <mimmi20@live.de>
+ * Copyright (c) 2015-2023, Thomas Mueller <mimmi20@live.de>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -14,19 +14,18 @@ namespace UaDeviceTypeTest;
 
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\TestCase;
-use SebastianBergmann\RecursionContext\InvalidArgumentException;
 use UaDeviceType\FonePad;
 
 final class FonePadTest extends TestCase
 {
     private const TYPE = 'fone-pad';
+
     private const NAME = 'FonePad';
 
     /**
      * tests the constructor and the getter
      *
      * @throws ExpectationFailedException
-     * @throws InvalidArgumentException
      */
     public function testSetterGetter(): void
     {
@@ -42,7 +41,7 @@ final class FonePadTest extends TestCase
         self::assertTrue($result->isTablet());
         self::assertSame(
             'a mobile device with its own screen (greater than 7") which are able to make phone calls',
-            $result->getDescription()
+            $result->getDescription(),
         );
     }
 }
