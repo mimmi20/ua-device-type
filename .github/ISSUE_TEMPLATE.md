@@ -1,7 +1,7 @@
-| Q                      | A
-| -----------------------| ---------------
-| ua-device-type version | x.y.z
-| PHP version            | x.y.z
+| Q                      | A              |
+| -----------------------| ---------------|
+| ua-device-type version | x.y.z          |
+| PHP version            | x.y.z          |
 
 
 <!--

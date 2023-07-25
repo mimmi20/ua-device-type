@@ -2,7 +2,7 @@
 /**
  * This file is part of the ua-device-type package.
  *
- * Copyright (c) 2015-2021, Thomas Mueller <mimmi20@live.de>
+ * Copyright (c) 2015-2023, Thomas Mueller <mimmi20@live.de>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -52,14 +52,13 @@ final class TypeLoader implements TypeLoaderInterface
         Watch::TYPE => Watch::class,
     ];
 
+    /** @throws void */
     public function has(string $key): bool
     {
         return array_key_exists($key, self::OPTIONS);
     }
 
-    /**
-     * @throws NotFoundException
-     */
+    /** @throws NotFoundException */
     public function load(string $key): TypeInterface
     {
         if (!$this->has($key)) {
