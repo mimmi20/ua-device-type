@@ -7,8 +7,8 @@
 ## Code Status
 
 [![codecov](https://codecov.io/gh/mimmi20/ua-device-type/branch/master/graph/badge.svg)](https://codecov.io/gh/mimmi20/ua-device-type)
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/mimmi20/ua-device-type.svg)](http://isitmaintained.com/project/mimmi20/ua-device-type "Average time to resolve an issue")
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/mimmi20/ua-device-type.svg)](http://isitmaintained.com/project/mimmi20/ua-device-type "Percentage of issues still open")
+[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/mimmi20/ua-device-type.svg)](https://isitmaintained.com/project/mimmi20/ua-device-type "Average time to resolve an issue")
+[![Percentage of issues still open](https://isitmaintained.com/badge/open/mimmi20/ua-device-type.svg)](https://isitmaintained.com/project/mimmi20/ua-device-type "Percentage of issues still open")
 
 ## Description
 
