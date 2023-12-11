@@ -56,6 +56,9 @@ parameters:
   # reports properties with native types that weren’t initialized in the class constructor
   checkUninitializedProperties: true
 
+  # reports missing #[\Override] attribute
+  checkMissingOverrideMethodAttribute: true
+
   # doesn’t require typehints for properties if the types can be inferred from constructor injection
   inferPrivatePropertyTypeFromConstructor: false
 
@@ -94,5 +97,5 @@ parameters:
       missingCheckedExceptionInThrows: true
       tooWideThrowType: true
 
-  ignoreErrors:
-    - '~Method UaDeviceType\\.*::getName\(\) never returns null so it can be removed from the return type~'
+#  ignoreErrors:
+#    - '~Method UaDeviceType\\.*::getName\(\) never returns null so it can be removed from the return type~'
