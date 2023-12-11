@@ -97,5 +97,5 @@ parameters:
       missingCheckedExceptionInThrows: true
       tooWideThrowType: true
 
-  ignoreErrors:
-    - '~Method UaDeviceType\\.*::getName\(\) never returns null so it can be removed from the return type~'
+#  ignoreErrors:
+#    - '~Method UaDeviceType\\.*::getName\(\) never returns null so it can be removed from the return type~'
