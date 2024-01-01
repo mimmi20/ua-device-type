@@ -12,4 +12,4 @@
 
 ## Description
 
-Classes dor different device types
+Classes for different device types
