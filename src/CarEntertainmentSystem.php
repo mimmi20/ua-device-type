@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class CarEntertainmentSystem implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'car-entertainment-system';
 

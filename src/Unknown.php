@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class Unknown implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'unknown';
 

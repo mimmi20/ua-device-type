@@ -12,6 +12,8 @@ declare(strict_types = 1);
 
 namespace UaDeviceType;
 
+use UaDeviceType\Exception\NotFoundException;
+
 use function array_key_exists;
 
 final class TypeLoader implements TypeLoaderInterface
@@ -52,7 +54,11 @@ final class TypeLoader implements TypeLoaderInterface
         Watch::TYPE => Watch::class,
     ];
 
-    /** @throws void */
+    /**
+     * @throws void
+     *
+     * @api
+     */
     public function has(string $key): bool
     {
         return array_key_exists($key, self::OPTIONS);

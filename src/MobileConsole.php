@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class MobileConsole implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'mobile-console';
 

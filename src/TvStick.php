@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class TvStick implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'tv-stick';
 

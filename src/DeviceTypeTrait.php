@@ -12,7 +12,7 @@ declare(strict_types = 1);
 
 namespace UaDeviceType;
 
-trait DeviceType
+trait DeviceTypeTrait
 {
     /**
      * Returns the type name of the device

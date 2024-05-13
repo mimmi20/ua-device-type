@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class MediaPlayer implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'media-player';
 

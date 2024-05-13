@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class Desktop implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'desktop';
 

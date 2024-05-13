@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class Smartphone implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'smartphone';
 

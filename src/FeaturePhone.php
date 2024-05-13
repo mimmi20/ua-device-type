@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class FeaturePhone implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'feature-phone';
 

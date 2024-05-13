@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class TvSettopBox implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'tv-set-top-box';
 

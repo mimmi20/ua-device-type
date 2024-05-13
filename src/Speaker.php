@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class Speaker implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'speaker';
 

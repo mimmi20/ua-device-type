@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class EbookReader implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'ebook-reader';
 
