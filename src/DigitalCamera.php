@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class DigitalCamera implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'digital-camera';
 

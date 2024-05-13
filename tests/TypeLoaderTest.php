@@ -15,7 +15,7 @@ namespace UaDeviceTypeTest;
 use PHPUnit\Framework\Exception;
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\TestCase;
-use UaDeviceType\NotFoundException;
+use UaDeviceType\Exception\NotFoundException;
 use UaDeviceType\TypeLoader;
 use UaDeviceType\Unknown;
 

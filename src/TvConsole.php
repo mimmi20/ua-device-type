@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class TvConsole implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'tv-console';
 

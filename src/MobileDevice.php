@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class MobileDevice implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'mobile-device';
 

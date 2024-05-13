@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class SmartDisplay implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'smart-display';
 

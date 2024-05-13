@@ -12,6 +12,8 @@ declare(strict_types = 1);
 
 namespace UaDeviceType;
 
+use UaDeviceType\Exception\NotFoundException;
+
 interface TypeLoaderInterface
 {
     /** @throws NotFoundException */

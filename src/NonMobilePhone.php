@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class NonMobilePhone implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'non-mobile-phone';
 

@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class Brailletouch implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'braille-touch';
 

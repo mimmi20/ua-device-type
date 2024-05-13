@@ -14,7 +14,7 @@ namespace UaDeviceType;
 
 final class VideoPhone implements TypeInterface
 {
-    use DeviceType;
+    use DeviceTypeTrait;
 
     public const TYPE = 'video-phone';
 
