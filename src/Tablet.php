@@ -16,45 +16,45 @@ final class Tablet implements TypeInterface
 {
     use DeviceTypeTrait;
 
-    public const TYPE = 'tablet';
+    public const string TYPE = 'tablet';
 
     /**
      * the name of the device
      */
-    private const NAME = 'Tablet';
+    private const string NAME = 'Tablet';
 
     /**
      * the device is a mobile device
      */
-    private const MOBILE = true;
+    private const bool MOBILE = true;
 
     /**
      * the device is a desktop device
      */
-    private const DESKTOP = false;
+    private const bool DESKTOP = false;
 
     /**
      * the device is a gaming device
      */
-    private const CONSOLE = false;
+    private const bool CONSOLE = false;
 
     /**
      * the device is a tv device
      */
-    private const TV = false;
+    private const bool TV = false;
 
     /**
      * the device is a phone device
      */
-    private const PHONE = false;
+    private const bool PHONE = false;
 
     /**
      * the device is a tablet device
      */
-    private const TABLET = true;
+    private const bool TABLET = true;
 
     /**
      * description for the device
      */
-    private const DESCRIPTION = 'a mobile device with its own screen (greater than 7") which are not able to make phone calls';
+    private const string DESCRIPTION = 'a mobile device with its own screen (greater than 7") which are not able to make phone calls';
 }

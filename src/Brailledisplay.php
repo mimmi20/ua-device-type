@@ -16,45 +16,45 @@ final class Brailledisplay implements TypeInterface
 {
     use DeviceTypeTrait;
 
-    public const TYPE = 'braille-display';
+    public const string TYPE = 'braille-display';
 
     /**
      * the name of the device
      */
-    private const NAME = 'Brailledisplay';
+    private const string NAME = 'Brailledisplay';
 
     /**
      * the device is a mobile device
      */
-    private const MOBILE = false;
+    private const bool MOBILE = false;
 
     /**
      * the device is a desktop device
      */
-    private const DESKTOP = true;
+    private const bool DESKTOP = true;
 
     /**
      * the device is a gaming device
      */
-    private const CONSOLE = false;
+    private const bool CONSOLE = false;
 
     /**
      * the device is a tv device
      */
-    private const TV = false;
+    private const bool TV = false;
 
     /**
      * the device is a phone device
      */
-    private const PHONE = false;
+    private const bool PHONE = false;
 
     /**
      * the device is a tablet device
      */
-    private const TABLET = false;
+    private const bool TABLET = false;
 
     /**
      * description for the device
      */
-    private const DESCRIPTION = 'a device without touch but with a braille output';
+    private const string DESCRIPTION = 'a device without touch but with a braille output';
 }

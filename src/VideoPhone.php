@@ -16,45 +16,45 @@ final class VideoPhone implements TypeInterface
 {
     use DeviceTypeTrait;
 
-    public const TYPE = 'video-phone';
+    public const string TYPE = 'video-phone';
 
     /**
      * the name of the device
      */
-    private const NAME = 'VideoPhone';
+    private const string NAME = 'VideoPhone';
 
     /**
      * the device is a mobile device
      */
-    private const MOBILE = false;
+    private const bool MOBILE = false;
 
     /**
      * the device is a desktop device
      */
-    private const DESKTOP = false;
+    private const bool DESKTOP = false;
 
     /**
      * the device is a gaming device
      */
-    private const CONSOLE = false;
+    private const bool CONSOLE = false;
 
     /**
      * the device is a tv device
      */
-    private const TV = false;
+    private const bool TV = false;
 
     /**
      * the device is a phone device
      */
-    private const PHONE = true;
+    private const bool PHONE = true;
 
     /**
      * the device is a tablet device
      */
-    private const TABLET = true;
+    private const bool TABLET = true;
 
     /**
      * description for the device
      */
-    private const DESCRIPTION = 'a non-mobile device with touch display which are able to make phone calls';
+    private const string DESCRIPTION = 'a non-mobile device with touch display which are able to make phone calls';
 }

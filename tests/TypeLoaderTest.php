@@ -12,6 +12,7 @@ declare(strict_types = 1);
 
 namespace UaDeviceTypeTest;
 
+use Override;
 use PHPUnit\Framework\Exception;
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\TestCase;
@@ -29,6 +30,7 @@ final class TypeLoaderTest extends TestCase
      *
      * @throws void
      */
+    #[Override]
     protected function setUp(): void
     {
         $this->object = new TypeLoader();

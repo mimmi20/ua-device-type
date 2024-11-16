@@ -12,13 +12,14 @@ declare(strict_types = 1);
 
 namespace UaDeviceType;
 
+use Override;
 use UaDeviceType\Exception\NotFoundException;
 
 use function array_key_exists;
 
 final class TypeLoader implements TypeLoaderInterface
 {
-    private const OPTIONS = [
+    private const array OPTIONS = [
         Bot::TYPE => Bot::class,
         Brailledisplay::TYPE => Brailledisplay::class,
         Brailletouch::TYPE => Brailletouch::class,
@@ -65,6 +66,7 @@ final class TypeLoader implements TypeLoaderInterface
     }
 
     /** @throws NotFoundException */
+    #[Override]
     public function load(string $key): TypeInterface
     {
         if (!$this->has($key)) {

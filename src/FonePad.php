@@ -16,45 +16,45 @@ final class FonePad implements TypeInterface
 {
     use DeviceTypeTrait;
 
-    public const TYPE = 'fone-pad';
+    public const string TYPE = 'fone-pad';
 
     /**
      * the name of the device
      */
-    private const NAME = 'FonePad';
+    private const string NAME = 'FonePad';
 
     /**
      * the device is a mobile device
      */
-    private const MOBILE = true;
+    private const bool MOBILE = true;
 
     /**
      * the device is a desktop device
      */
-    private const DESKTOP = false;
+    private const bool DESKTOP = false;
 
     /**
      * the device is a gaming device
      */
-    private const CONSOLE = false;
+    private const bool CONSOLE = false;
 
     /**
      * the device is a tv device
      */
-    private const TV = false;
+    private const bool TV = false;
 
     /**
      * the device is a phone device
      */
-    private const PHONE = true;
+    private const bool PHONE = true;
 
     /**
      * the device is a tablet device
      */
-    private const TABLET = true;
+    private const bool TABLET = true;
 
     /**
      * description for the device
      */
-    private const DESCRIPTION = 'a mobile device with its own screen (greater than 7") which are able to make phone calls';
+    private const string DESCRIPTION = 'a mobile device with its own screen (greater than 7") which are able to make phone calls';
 }

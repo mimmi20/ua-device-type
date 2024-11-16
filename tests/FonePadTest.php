@@ -18,9 +18,9 @@ use UaDeviceType\FonePad;
 
 final class FonePadTest extends TestCase
 {
-    private const TYPE = 'fone-pad';
+    private const string TYPE = 'fone-pad';
 
-    private const NAME = 'FonePad';
+    private const string NAME = 'FonePad';
 
     /**
      * tests the constructor and the getter

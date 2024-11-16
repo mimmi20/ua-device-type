@@ -16,45 +16,45 @@ final class NonMobilePhone implements TypeInterface
 {
     use DeviceTypeTrait;
 
-    public const TYPE = 'non-mobile-phone';
+    public const string TYPE = 'non-mobile-phone';
 
     /**
      * the name of the device
      */
-    private const NAME = 'Non-Mobile Phone';
+    private const string NAME = 'Non-Mobile Phone';
 
     /**
      * the device is a mobile device
      */
-    private const MOBILE = false;
+    private const bool MOBILE = false;
 
     /**
      * the device is a desktop device
      */
-    private const DESKTOP = false;
+    private const bool DESKTOP = false;
 
     /**
      * the device is a gaming device
      */
-    private const CONSOLE = false;
+    private const bool CONSOLE = false;
 
     /**
      * the device is a tv device
      */
-    private const TV = false;
+    private const bool TV = false;
 
     /**
      * the device is a phone device
      */
-    private const PHONE = true;
+    private const bool PHONE = true;
 
     /**
      * the device is a tablet device
      */
-    private const TABLET = false;
+    private const bool TABLET = false;
 
     /**
      * description for the device
      */
-    private const DESCRIPTION = 'a non-mobile device without touch display which are able to make phone calls';
+    private const string DESCRIPTION = 'a non-mobile device without touch display which are able to make phone calls';
 }
