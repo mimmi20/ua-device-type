@@ -16,45 +16,45 @@ final class FridgeFreezer implements TypeInterface
 {
     use DeviceTypeTrait;
 
-    public const TYPE = 'fridge-freezer';
+    public const string TYPE = 'fridge-freezer';
 
     /**
      * the name of the device
      */
-    private const NAME = 'Fridge Freezer';
+    private const string NAME = 'Fridge Freezer';
 
     /**
      * the device is a mobile device
      */
-    private const MOBILE = false;
+    private const bool MOBILE = false;
 
     /**
      * the device is a desktop device
      */
-    private const DESKTOP = false;
+    private const bool DESKTOP = false;
 
     /**
      * the device is a gaming device
      */
-    private const CONSOLE = false;
+    private const bool CONSOLE = false;
 
     /**
      * the device is a tv device
      */
-    private const TV = false;
+    private const bool TV = false;
 
     /**
      * the device is a phone device
      */
-    private const PHONE = false;
+    private const bool PHONE = false;
 
     /**
      * the device is a tablet device
      */
-    private const TABLET = false;
+    private const bool TABLET = false;
 
     /**
      * description for the device
      */
-    private const DESCRIPTION = 'a fridge/freezer with a touch screen';
+    private const string DESCRIPTION = 'a fridge/freezer with a touch screen';
 }

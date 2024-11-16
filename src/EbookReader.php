@@ -16,45 +16,45 @@ final class EbookReader implements TypeInterface
 {
     use DeviceTypeTrait;
 
-    public const TYPE = 'ebook-reader';
+    public const string TYPE = 'ebook-reader';
 
     /**
      * the name of the device
      */
-    private const NAME = 'Ebook Reader';
+    private const string NAME = 'Ebook Reader';
 
     /**
      * the device is a mobile device
      */
-    private const MOBILE = true;
+    private const bool MOBILE = true;
 
     /**
      * the device is a desktop device
      */
-    private const DESKTOP = false;
+    private const bool DESKTOP = false;
 
     /**
      * the device is a gaming device
      */
-    private const CONSOLE = false;
+    private const bool CONSOLE = false;
 
     /**
      * the device is a tv device
      */
-    private const TV = false;
+    private const bool TV = false;
 
     /**
      * the device is a phone device
      */
-    private const PHONE = false;
+    private const bool PHONE = false;
 
     /**
      * the device is a tablet device
      */
-    private const TABLET = false;
+    private const bool TABLET = false;
 
     /**
      * description for the device
      */
-    private const DESCRIPTION = 'a mobile device with its own screen to read E-Books';
+    private const string DESCRIPTION = 'a mobile device with its own screen to read E-Books';
 }

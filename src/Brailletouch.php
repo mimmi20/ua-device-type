@@ -16,45 +16,45 @@ final class Brailletouch implements TypeInterface
 {
     use DeviceTypeTrait;
 
-    public const TYPE = 'braille-touch';
+    public const string TYPE = 'braille-touch';
 
     /**
      * the name of the device
      */
-    private const NAME = 'BrailleTouch';
+    private const string NAME = 'BrailleTouch';
 
     /**
      * the device is a mobile device
      */
-    private const MOBILE = true;
+    private const bool MOBILE = true;
 
     /**
      * the device is a desktop device
      */
-    private const DESKTOP = false;
+    private const bool DESKTOP = false;
 
     /**
      * the device is a gaming device
      */
-    private const CONSOLE = false;
+    private const bool CONSOLE = false;
 
     /**
      * the device is a tv device
      */
-    private const TV = false;
+    private const bool TV = false;
 
     /**
      * the device is a phone device
      */
-    private const PHONE = false;
+    private const bool PHONE = false;
 
     /**
      * the device is a tablet device
      */
-    private const TABLET = true;
+    private const bool TABLET = true;
 
     /**
      * description for the device
      */
-    private const DESCRIPTION = 'a device with touch and a braille output';
+    private const string DESCRIPTION = 'a device with touch and a braille output';
 }

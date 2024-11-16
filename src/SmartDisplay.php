@@ -16,45 +16,45 @@ final class SmartDisplay implements TypeInterface
 {
     use DeviceTypeTrait;
 
-    public const TYPE = 'smart-display';
+    public const string TYPE = 'smart-display';
 
     /**
      * the name of the device
      */
-    private const NAME = 'Smart Display';
+    private const string NAME = 'Smart Display';
 
     /**
      * the device is a mobile device
      */
-    private const MOBILE = false;
+    private const bool MOBILE = false;
 
     /**
      * the device is a desktop device
      */
-    private const DESKTOP = false;
+    private const bool DESKTOP = false;
 
     /**
      * the device is a gaming device
      */
-    private const CONSOLE = false;
+    private const bool CONSOLE = false;
 
     /**
      * the device is a tv device
      */
-    private const TV = false;
+    private const bool TV = false;
 
     /**
      * the device is a phone device
      */
-    private const PHONE = false;
+    private const bool PHONE = false;
 
     /**
      * the device is a tablet device
      */
-    private const TABLET = false;
+    private const bool TABLET = false;
 
     /**
      * description for the device
      */
-    private const DESCRIPTION = 'a (non)mobile device with its own touch screen';
+    private const string DESCRIPTION = 'a (non)mobile device with its own touch screen';
 }

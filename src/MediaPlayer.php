@@ -16,45 +16,45 @@ final class MediaPlayer implements TypeInterface
 {
     use DeviceTypeTrait;
 
-    public const TYPE = 'media-player';
+    public const string TYPE = 'media-player';
 
     /**
      * the name of the device
      */
-    private const NAME = 'Media Player';
+    private const string NAME = 'Media Player';
 
     /**
      * the device is a mobile device
      */
-    private const MOBILE = false;
+    private const bool MOBILE = false;
 
     /**
      * the device is a desktop device
      */
-    private const DESKTOP = false;
+    private const bool DESKTOP = false;
 
     /**
      * the device is a gaming device
      */
-    private const CONSOLE = false;
+    private const bool CONSOLE = false;
 
     /**
      * the device is a tv device
      */
-    private const TV = false;
+    private const bool TV = false;
 
     /**
      * the device is a phone device
      */
-    private const PHONE = false;
+    private const bool PHONE = false;
 
     /**
      * the device is a tablet device
      */
-    private const TABLET = true;
+    private const bool TABLET = true;
 
     /**
      * description for the device
      */
-    private const DESCRIPTION = 'a non-mobile entertainment device with its own screen without the ability to make phone calls';
+    private const string DESCRIPTION = 'a non-mobile entertainment device with its own screen without the ability to make phone calls';
 }

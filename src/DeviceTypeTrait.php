@@ -12,6 +12,8 @@ declare(strict_types = 1);
 
 namespace UaDeviceType;
 
+use Override;
+
 trait DeviceTypeTrait
 {
     /**
@@ -19,6 +21,7 @@ trait DeviceTypeTrait
      *
      * @throws void
      */
+    #[Override]
     public function getType(): string
     {
         return self::TYPE;
@@ -29,6 +32,7 @@ trait DeviceTypeTrait
      *
      * @throws void
      */
+    #[Override]
     public function getName(): string | null
     {
         return self::NAME;
@@ -39,6 +43,7 @@ trait DeviceTypeTrait
      *
      * @throws void
      */
+    #[Override]
     public function isMobile(): bool
     {
         return self::MOBILE;
@@ -49,6 +54,7 @@ trait DeviceTypeTrait
      *
      * @throws void
      */
+    #[Override]
     public function isDesktop(): bool
     {
         return self::DESKTOP;
@@ -59,6 +65,7 @@ trait DeviceTypeTrait
      *
      * @throws void
      */
+    #[Override]
     public function isConsole(): bool
     {
         return self::CONSOLE;
@@ -69,6 +76,7 @@ trait DeviceTypeTrait
      *
      * @throws void
      */
+    #[Override]
     public function isTv(): bool
     {
         return self::TV;
@@ -79,6 +87,7 @@ trait DeviceTypeTrait
      *
      * @throws void
      */
+    #[Override]
     public function isPhone(): bool
     {
         return self::PHONE;
@@ -89,6 +98,7 @@ trait DeviceTypeTrait
      *
      * @throws void
      */
+    #[Override]
     public function isTablet(): bool
     {
         return self::TABLET;
@@ -99,6 +109,7 @@ trait DeviceTypeTrait
      *
      * @throws void
      */
+    #[Override]
     public function getDescription(): string
     {
         return self::DESCRIPTION;

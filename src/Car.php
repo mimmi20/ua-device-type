@@ -16,45 +16,45 @@ final class Car implements TypeInterface
 {
     use DeviceTypeTrait;
 
-    public const TYPE = 'car';
+    public const string TYPE = 'car';
 
     /**
      * the name of the device
      */
-    private const NAME = 'Car';
+    private const string NAME = 'Car';
 
     /**
      * the device is a mobile device
      */
-    private const MOBILE = false;
+    private const bool MOBILE = false;
 
     /**
      * the device is a desktop device
      */
-    private const DESKTOP = false;
+    private const bool DESKTOP = false;
 
     /**
      * the device is a gaming device
      */
-    private const CONSOLE = false;
+    private const bool CONSOLE = false;
 
     /**
      * the device is a tv device
      */
-    private const TV = false;
+    private const bool TV = false;
 
     /**
      * the device is a phone device
      */
-    private const PHONE = false;
+    private const bool PHONE = false;
 
     /**
      * the device is a tablet device
      */
-    private const TABLET = false;
+    private const bool TABLET = false;
 
     /**
      * description for the device
      */
-    private const DESCRIPTION = 'a device implemented in a car, but not for entertainment';
+    private const string DESCRIPTION = 'a device implemented in a car, but not for entertainment';
 }

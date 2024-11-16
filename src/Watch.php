@@ -16,45 +16,45 @@ final class Watch implements TypeInterface
 {
     use DeviceTypeTrait;
 
-    public const TYPE = 'watch';
+    public const string TYPE = 'watch';
 
     /**
      * the name of the device
      */
-    private const NAME = 'Smartwatch';
+    private const string NAME = 'Smartwatch';
 
     /**
      * the device is a mobile device
      */
-    private const MOBILE = true;
+    private const bool MOBILE = true;
 
     /**
      * the device is a desktop device
      */
-    private const DESKTOP = false;
+    private const bool DESKTOP = false;
 
     /**
      * the device is a gaming device
      */
-    private const CONSOLE = false;
+    private const bool CONSOLE = false;
 
     /**
      * the device is a tv device
      */
-    private const TV = false;
+    private const bool TV = false;
 
     /**
      * the device is a phone device
      */
-    private const PHONE = false;
+    private const bool PHONE = false;
 
     /**
      * the device is a tablet device
      */
-    private const TABLET = false;
+    private const bool TABLET = false;
 
     /**
      * description for the device
      */
-    private const DESCRIPTION = 'a smart watch';
+    private const string DESCRIPTION = 'a smart watch';
 }

@@ -16,45 +16,45 @@ final class Smartphone implements TypeInterface
 {
     use DeviceTypeTrait;
 
-    public const TYPE = 'smartphone';
+    public const string TYPE = 'smartphone';
 
     /**
      * the name of the device
      */
-    private const NAME = 'Smartphone';
+    private const string NAME = 'Smartphone';
 
     /**
      * the device is a mobile device
      */
-    private const MOBILE = true;
+    private const bool MOBILE = true;
 
     /**
      * the device is a desktop device
      */
-    private const DESKTOP = false;
+    private const bool DESKTOP = false;
 
     /**
      * the device is a gaming device
      */
-    private const CONSOLE = false;
+    private const bool CONSOLE = false;
 
     /**
      * the device is a tv device
      */
-    private const TV = false;
+    private const bool TV = false;
 
     /**
      * the device is a phone device
      */
-    private const PHONE = true;
+    private const bool PHONE = true;
 
     /**
      * the device is a tablet device
      */
-    private const TABLET = false;
+    private const bool TABLET = false;
 
     /**
      * description for the device
      */
-    private const DESCRIPTION = 'a mobile device with its own touch screen (less than 6") which are able to make phone calls';
+    private const string DESCRIPTION = 'a mobile device with its own touch screen (less than 6") which are able to make phone calls';
 }
