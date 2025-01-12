@@ -683,6 +683,20 @@ final class TypeTest extends TestCase
                 'hasTouch' => false,
                 'description' => 'a non-mobile device without touch display which is able to make phone calls',
             ],
+            [
+                'fallback' => 'non-mobile-phone',
+                'type' => 'phone',
+                'name' => 'Phone',
+                'isMobile' => false,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => false,
+                'isPhone' => true,
+                'isTablet' => false,
+                'hasDisplay' => true,
+                'hasTouch' => false,
+                'description' => 'a non-mobile device without touch display which is able to make phone calls',
+            ],
         ];
     }
 }
