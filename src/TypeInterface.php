@@ -72,6 +72,20 @@ interface TypeInterface
     public function isTablet(): bool;
 
     /**
+     * Returns True, if the device has its own display
+     *
+     * @throws void
+     */
+    public function hasDisplay(): bool;
+
+    /**
+     * Returns True, if the device has its own touch display
+     *
+     * @throws void
+     */
+    public function hasTouch(): bool;
+
+    /**
      * Returns a description for the device
      *
      * @throws void
