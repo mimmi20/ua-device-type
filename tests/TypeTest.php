@@ -555,4 +555,134 @@ final class TypeTest extends TestCase
             ],
         ];
     }
+
+    /**
+     * tests the constructor and the getter
+     *
+     * @throws ExpectationFailedException
+     */
+    #[DataProvider('providerFallback')]
+    public function testFallbackType(
+        string $fallback,
+        string $type,
+        string $name,
+        bool $isMobile,
+        bool $isDesktop,
+        bool $isConsole,
+        bool $isTv,
+        bool $isPhone,
+        bool $isTablet,
+        bool $hasDisplay,
+        bool $hasTouch,
+        string $description,
+    ): void {
+        $result = Type::fromName($fallback);
+
+        self::assertSame($type, $result->getType());
+        self::assertSame($name, $result->getName());
+        self::assertSame($isMobile, $result->isMobile());
+        self::assertSame($isDesktop, $result->isDesktop());
+        self::assertSame($isConsole, $result->isConsole());
+        self::assertSame($isTv, $result->isTv());
+        self::assertSame($isPhone, $result->isPhone());
+        self::assertSame($isTablet, $result->isTablet());
+        self::assertSame($hasDisplay, $result->hasDisplay());
+        self::assertSame($hasTouch, $result->hasTouch());
+        self::assertSame($description, $result->getDescription());
+    }
+
+    /**
+     * @return array<int, array{fallback: string, type: string, name: string, isMobile: bool, isDesktop: bool, isConsole: bool, isTv: bool, isPhone: bool, isTablet: bool, hasDisplay: bool, hasTouch: bool, description: string}>
+     *
+     * @throws void
+     */
+    public static function providerFallback(): array
+    {
+        return [
+            [
+                'fallback' => 'watch',
+                'type' => 'smart-watch',
+                'name' => 'SmartWatch',
+                'isMobile' => true,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => false,
+                'isPhone' => false,
+                'isTablet' => false,
+                'hasDisplay' => true,
+                'hasTouch' => true,
+                'description' => 'a smart watch',
+            ],
+            [
+                'fallback' => 'Watch',
+                'type' => 'smart-watch',
+                'name' => 'SmartWatch',
+                'isMobile' => true,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => false,
+                'isPhone' => false,
+                'isTablet' => false,
+                'hasDisplay' => true,
+                'hasTouch' => true,
+                'description' => 'a smart watch',
+            ],
+            [
+                'fallback' => 'speaker',
+                'type' => 'smart-speaker',
+                'name' => 'Smart Speaker',
+                'isMobile' => false,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => false,
+                'isPhone' => false,
+                'isTablet' => false,
+                'hasDisplay' => false,
+                'hasTouch' => false,
+                'description' => 'a smart speaker without its own screen',
+            ],
+            [
+                'fallback' => 'Speaker',
+                'type' => 'smart-speaker',
+                'name' => 'Smart Speaker',
+                'isMobile' => false,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => false,
+                'isPhone' => false,
+                'isTablet' => false,
+                'hasDisplay' => false,
+                'hasTouch' => false,
+                'description' => 'a smart speaker without its own screen',
+            ],
+            [
+                'fallback' => 'Non-Mobile Phone',
+                'type' => 'phone',
+                'name' => 'Phone',
+                'isMobile' => false,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => false,
+                'isPhone' => true,
+                'isTablet' => false,
+                'hasDisplay' => true,
+                'hasTouch' => false,
+                'description' => 'a non-mobile device without touch display which is able to make phone calls',
+            ],
+            [
+                'fallback' => 'NonMobilePhone',
+                'type' => 'phone',
+                'name' => 'Phone',
+                'isMobile' => false,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => false,
+                'isPhone' => true,
+                'isTablet' => false,
+                'hasDisplay' => true,
+                'hasTouch' => false,
+                'description' => 'a non-mobile device without touch display which is able to make phone calls',
+            ],
+        ];
+    }
 }
