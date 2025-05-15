@@ -41,7 +41,7 @@
     "nikic/php-parser": "^5.4.0",
     "phpstan/extension-installer": "^1.4.3",
     "phpstan/phpstan": "^2.1.14",
-    "phpstan/phpstan-deprecation-rules": "^2.0.2",
+    "phpstan/phpstan-deprecation-rules": "^2.0.3",
     "phpstan/phpstan-phpunit": "^2.0.6",
     "phpunit/phpunit": "^12.1.5",
     "rector/rector": "^2.0.16",
