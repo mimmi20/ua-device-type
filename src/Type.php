@@ -83,6 +83,8 @@ enum Type: string implements TypeInterface
 
     case Unknown = 'unknown';
 
+    case Wearable = 'wearable';
+
     /**
      * @throws void
      *
@@ -123,6 +125,7 @@ enum Type: string implements TypeInterface
             'TvSettopBox', 'tv-set-top-box', 'TV SetTop Box' => self::TvSettopBox,
             'TvStick', 'tv-stick', 'TV Stick' => self::TvStick,
             'VideoPhone', 'video-phone' => self::VideoPhone,
+            'wearable', 'Wearable' => self::Wearable,
             default => self::Unknown,
         };
     }
@@ -177,7 +180,7 @@ enum Type: string implements TypeInterface
     public function isMobile(): bool
     {
         return match ($this) {
-            self::Brailletouch, self::DigitalCamera, self::EbookReader, self::FeaturePhone, self::FonePad, self::MobileConsole, self::MobileDevice, self::MobileMediaPlayer, self::MobilePhone, self::Phablet, self::Smartphone, self::Tablet, self::SmartWatch => true,
+            self::Brailletouch, self::DigitalCamera, self::EbookReader, self::FeaturePhone, self::FonePad, self::MobileConsole, self::MobileDevice, self::MobileMediaPlayer, self::MobilePhone, self::Phablet, self::Smartphone, self::Tablet, self::SmartWatch, self::Wearable => true,
             default => false,
         };
     }
@@ -321,6 +324,7 @@ enum Type: string implements TypeInterface
             self::TvSettopBox => 'a media player which uses a tv as screen',
             self::TvStick => 'a media player in the form of a USB stick which uses a tv as screen',
             self::VideoPhone => 'a non-mobile device with touch display which is able to make phone calls',
+            self::Wearable => 'a general mobile device with its own touch screen',
             default => 'an unknown device',
         };
     }

@@ -553,6 +553,19 @@ final class TypeTest extends TestCase
                 'hasTouch' => false,
                 'description' => 'an unknown device',
             ],
+            [
+                'type' => 'wearable',
+                'name' => 'Wearable',
+                'isMobile' => true,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => false,
+                'isPhone' => false,
+                'isTablet' => false,
+                'hasDisplay' => true,
+                'hasTouch' => true,
+                'description' => 'a general mobile device with its own touch screen',
+            ],
         ];
     }
 
@@ -696,6 +709,20 @@ final class TypeTest extends TestCase
                 'hasDisplay' => true,
                 'hasTouch' => false,
                 'description' => 'a non-mobile device without touch display which is able to make phone calls',
+            ],
+            [
+                'fallback' => 'Wearable',
+                'type' => 'wearable',
+                'name' => 'Wearable',
+                'isMobile' => true,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => false,
+                'isPhone' => false,
+                'isTablet' => false,
+                'hasDisplay' => true,
+                'hasTouch' => true,
+                'description' => 'a general mobile device with its own touch screen',
             ],
         ];
     }
