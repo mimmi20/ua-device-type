@@ -576,7 +576,7 @@ final class TypeTest extends TestCase
      */
     #[DataProvider('providerFallback')]
     public function testFallbackType(
-        string $fallback,
+        string | null $fallback,
         string $type,
         string $name,
         bool $isMobile,
@@ -765,6 +765,20 @@ final class TypeTest extends TestCase
                 'hasDisplay' => true,
                 'hasTouch' => false,
                 'description' => 'a tv',
+            ],
+            [
+                'fallback' => null,
+                'type' => 'unknown',
+                'name' => 'Unknown',
+                'isMobile' => false,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => false,
+                'isPhone' => false,
+                'isTablet' => false,
+                'hasDisplay' => false,
+                'hasTouch' => false,
+                'description' => 'an unknown device',
             ],
         ];
     }
