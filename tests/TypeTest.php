@@ -605,7 +605,7 @@ final class TypeTest extends TestCase
     }
 
     /**
-     * @return array<int, array{fallback: string, type: string, name: string, isMobile: bool, isDesktop: bool, isConsole: bool, isTv: bool, isPhone: bool, isTablet: bool, hasDisplay: bool, hasTouch: bool, description: string}>
+     * @return array<int, array{fallback: string|null, type: string, name: string, isMobile: bool, isDesktop: bool, isConsole: bool, isTv: bool, isPhone: bool, isTablet: bool, hasDisplay: bool, hasTouch: bool, description: string}>
      *
      * @throws void
      */
