@@ -55,6 +55,8 @@ enum Type: string implements TypeInterface
 
     case MobilePhone = 'mobile-phone';
 
+    case Peripheral = 'peripheral';
+
     case Phablet = 'phablet';
 
     case Phone = 'phone';
@@ -103,7 +105,7 @@ enum Type: string implements TypeInterface
             'brailledisplay', 'braille-display' => self::Brailledisplay,
             'brailletouch', 'braille-touch' => self::Brailletouch,
             'car' => self::Car,
-            'carentertainmentsystem', 'car-entertainment-system', 'car entertainment system' => self::CarEntertainmentSystem,
+            'carentertainmentsystem', 'car-entertainment-system', 'car entertainment system', 'car browser' => self::CarEntertainmentSystem,
             'console' => self::Console,
             'desktop' => self::Desktop,
             'digitalcamera', 'digital-camera', 'digital camera' => self::DigitalCamera,
@@ -117,6 +119,7 @@ enum Type: string implements TypeInterface
             'mobiledevice', 'mobile-device', 'mobile device' => self::MobileDevice,
             'mobilemediaplayer', 'mobile-media-player', 'mobile media player', 'portable media player' => self::MobileMediaPlayer,
             'mobilephone', 'mobile-phone', 'mobile phone' => self::MobilePhone,
+            'peripheral' => self::Peripheral,
             'phablet' => self::Phablet,
             'phone', 'non-mobile-phone', 'nonmobilephone', 'non-mobile phone' => self::Phone,
             'printer' => self::Printer,
@@ -316,6 +319,7 @@ enum Type: string implements TypeInterface
             self::MobileDevice => 'a general mobile device with its own screen without the ability to make phone calls',
             self::MobileMediaPlayer => 'a mobile entertainment device with its own screen without the ability to make phone calls',
             self::MobilePhone => 'a general mobile device which is able to make phone calls',
+            self::Peripheral => 'a mobile device with its own screen',
             self::Phablet => 'a mobile device with its own screen which is able to make phone calls',
             self::Phone => 'a non-mobile device without touch display which is able to make phone calls',
             self::Printer => 'a printer with a touch screen',

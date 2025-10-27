@@ -566,6 +566,19 @@ final class TypeTest extends TestCase
                 'hasTouch' => true,
                 'description' => 'a general mobile device with its own touch screen',
             ],
+            [
+                'type' => 'peripheral',
+                'name' => 'Peripheral',
+                'isMobile' => false,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => false,
+                'isPhone' => false,
+                'isTablet' => false,
+                'hasDisplay' => true,
+                'hasTouch' => true,
+                'description' => 'a mobile device with its own screen',
+            ],
         ];
     }
 
@@ -779,6 +792,20 @@ final class TypeTest extends TestCase
                 'hasDisplay' => false,
                 'hasTouch' => false,
                 'description' => 'an unknown device',
+            ],
+            [
+                'fallback' => 'car browser',
+                'type' => 'car-entertainment-system',
+                'name' => 'Car Entertainment System',
+                'isMobile' => false,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => false,
+                'isPhone' => false,
+                'isTablet' => false,
+                'hasDisplay' => true,
+                'hasTouch' => true,
+                'description' => 'a entertainment device implemented in a car',
             ],
         ];
     }
