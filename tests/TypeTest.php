@@ -793,20 +793,6 @@ final class TypeTest extends TestCase
                 'hasTouch' => false,
                 'description' => 'an unknown device',
             ],
-            [
-                'fallback' => 'car browser',
-                'type' => 'car-entertainment-system',
-                'name' => 'Car Entertainment System',
-                'isMobile' => false,
-                'isDesktop' => false,
-                'isConsole' => false,
-                'isTv' => false,
-                'isPhone' => false,
-                'isTablet' => false,
-                'hasDisplay' => true,
-                'hasTouch' => true,
-                'description' => 'a entertainment device implemented in a car',
-            ],
         ];
     }
 }

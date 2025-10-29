@@ -105,7 +105,7 @@ enum Type: string implements TypeInterface
             'brailledisplay', 'braille-display' => self::Brailledisplay,
             'brailletouch', 'braille-touch' => self::Brailletouch,
             'car' => self::Car,
-            'carentertainmentsystem', 'car-entertainment-system', 'car entertainment system', 'car browser' => self::CarEntertainmentSystem,
+            'carentertainmentsystem', 'car-entertainment-system', 'car entertainment system' => self::CarEntertainmentSystem,
             'console' => self::Console,
             'desktop' => self::Desktop,
             'digitalcamera', 'digital-camera', 'digital camera' => self::DigitalCamera,
