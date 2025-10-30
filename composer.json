@@ -27,7 +27,8 @@
     "source": "https://github.com/mimmi20/ua-device-type"
   },
   "require": {
-    "php": "~8.4.0 || ~8.5.0"
+    "php": "~8.4.0 || ~8.5.0",
+    "ext-mbstring": "*"
   },
   "require-dev": {
     "ext-ctype": "*",

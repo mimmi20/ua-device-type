@@ -15,6 +15,8 @@ namespace UaDeviceType;
 
 use Override;
 
+use function mb_strtolower;
+
 enum Type: string implements TypeInterface
 {
     case Bot = 'bot';
@@ -52,6 +54,8 @@ enum Type: string implements TypeInterface
     case MobileMediaPlayer = 'mobile-media-player';
 
     case MobilePhone = 'mobile-phone';
+
+    case Peripheral = 'peripheral';
 
     case Phablet = 'phablet';
 
@@ -92,40 +96,45 @@ enum Type: string implements TypeInterface
      */
     public static function fromName(string | null $name): self
     {
-        return match ($name) {
-            'Bot', 'bot' => self::Bot,
-            'Brailledisplay', 'braille-display' => self::Brailledisplay,
-            'Brailletouch', 'braille-touch' => self::Brailletouch,
-            'Car', 'car' => self::Car,
-            'CarEntertainmentSystem', 'car-entertainment-system', 'Car Entertainment System' => self::CarEntertainmentSystem,
-            'Console', 'console' => self::Console,
-            'Desktop', 'desktop' => self::Desktop,
-            'DigitalCamera', 'digital-camera', 'Digital Camera' => self::DigitalCamera,
-            'EbookReader', 'ebook-reader', 'Ebook Reader' => self::EbookReader,
-            'FeaturePhone', 'feature-phone', 'Feature Phone' => self::FeaturePhone,
-            'FonePad', 'fone-pad' => self::FonePad,
-            'FridgeFreezer', 'fridge-freezer', 'Fridge Freezer' => self::FridgeFreezer,
-            'Laptop', 'laptop' => self::Laptop,
-            'MediaPlayer', 'media-player', 'Media Player' => self::MediaPlayer,
-            'MobileConsole', 'mobile-console', 'Mobile Console' => self::MobileConsole,
-            'MobileDevice', 'mobile-device', 'Mobile Device' => self::MobileDevice,
-            'MobileMediaPlayer', 'mobile-media-player', 'Mobile Media Player' => self::MobileMediaPlayer,
-            'MobilePhone', 'mobile-phone', 'Mobile Phone' => self::MobilePhone,
-            'Phablet', 'phablet' => self::Phablet,
-            'Phone', 'phone', 'non-mobile-phone', 'NonMobilePhone', 'Non-Mobile Phone' => self::Phone,
-            'Printer', 'printer' => self::Printer,
-            'SmartDisplay', 'smart-display', 'Smart Display' => self::SmartDisplay,
-            'Smartphone', 'smartphone' => self::Smartphone,
-            'SmartSpeaker', 'smart-speaker', 'Smart Speaker', 'Speaker', 'speaker' => self::SmartSpeaker,
-            'SmartWatch', 'smart-watch', 'Watch', 'watch' => self::SmartWatch,
-            'Tablet', 'tablet' => self::Tablet,
-            'Tv', 'tv', 'TV' => self::Tv,
-            'TvConsole', 'tv-console', 'TV Console' => self::TvConsole,
-            'TvMediaPlayer', 'tv-media-player', 'TV Media Player' => self::TvMediaPlayer,
-            'TvSettopBox', 'tv-set-top-box', 'TV SetTop Box' => self::TvSettopBox,
-            'TvStick', 'tv-stick', 'TV Stick' => self::TvStick,
-            'VideoPhone', 'video-phone' => self::VideoPhone,
-            'wearable', 'Wearable' => self::Wearable,
+        if ($name === null) {
+            return self::Unknown;
+        }
+
+        return match (mb_strtolower($name)) {
+            'bot' => self::Bot,
+            'brailledisplay', 'braille-display' => self::Brailledisplay,
+            'brailletouch', 'braille-touch' => self::Brailletouch,
+            'car' => self::Car,
+            'carentertainmentsystem', 'car-entertainment-system', 'car entertainment system' => self::CarEntertainmentSystem,
+            'console' => self::Console,
+            'desktop' => self::Desktop,
+            'digitalcamera', 'digital-camera', 'digital camera' => self::DigitalCamera,
+            'ebookreader', 'ebook-reader', 'ebook reader' => self::EbookReader,
+            'featurephone', 'feature-phone', 'feature phone' => self::FeaturePhone,
+            'fonepad', 'fone-pad' => self::FonePad,
+            'fridgefreezer', 'fridge-freezer', 'fridge freezer' => self::FridgeFreezer,
+            'laptop' => self::Laptop,
+            'mediaplayer', 'media-player', 'media player' => self::MediaPlayer,
+            'mobileconsole', 'mobile-console', 'mobile console' => self::MobileConsole,
+            'mobiledevice', 'mobile-device', 'mobile device' => self::MobileDevice,
+            'mobilemediaplayer', 'mobile-media-player', 'mobile media player', 'portable media player' => self::MobileMediaPlayer,
+            'mobilephone', 'mobile-phone', 'mobile phone' => self::MobilePhone,
+            'peripheral' => self::Peripheral,
+            'phablet' => self::Phablet,
+            'phone', 'non-mobile-phone', 'nonmobilephone', 'non-mobile phone' => self::Phone,
+            'printer' => self::Printer,
+            'smartdisplay', 'smart-display', 'smart display' => self::SmartDisplay,
+            'smartphone' => self::Smartphone,
+            'smartspeaker', 'smart-speaker', 'smart speaker', 'speaker' => self::SmartSpeaker,
+            'smartwatch', 'smart-watch', 'watch' => self::SmartWatch,
+            'tablet' => self::Tablet,
+            'tv', 'smart-tv', 'tv device' => self::Tv,
+            'tvconsole', 'tv-console', 'tv console' => self::TvConsole,
+            'tvmediaplayer', 'tv-media-player', 'tv media player' => self::TvMediaPlayer,
+            'tvsettopbox', 'tv-set-top-box', 'tv settop box' => self::TvSettopBox,
+            'tvstick', 'tv-stick', 'tv stick' => self::TvStick,
+            'videophone', 'video-phone' => self::VideoPhone,
+            'wearable' => self::Wearable,
             default => self::Unknown,
         };
     }
@@ -310,6 +319,7 @@ enum Type: string implements TypeInterface
             self::MobileDevice => 'a general mobile device with its own screen without the ability to make phone calls',
             self::MobileMediaPlayer => 'a mobile entertainment device with its own screen without the ability to make phone calls',
             self::MobilePhone => 'a general mobile device which is able to make phone calls',
+            self::Peripheral => 'a mobile device with its own screen',
             self::Phablet => 'a mobile device with its own screen which is able to make phone calls',
             self::Phone => 'a non-mobile device without touch display which is able to make phone calls',
             self::Printer => 'a printer with a touch screen',

@@ -566,6 +566,19 @@ final class TypeTest extends TestCase
                 'hasTouch' => true,
                 'description' => 'a general mobile device with its own touch screen',
             ],
+            [
+                'type' => 'peripheral',
+                'name' => 'Peripheral',
+                'isMobile' => false,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => false,
+                'isPhone' => false,
+                'isTablet' => false,
+                'hasDisplay' => true,
+                'hasTouch' => true,
+                'description' => 'a mobile device with its own screen',
+            ],
         ];
     }
 
@@ -576,7 +589,7 @@ final class TypeTest extends TestCase
      */
     #[DataProvider('providerFallback')]
     public function testFallbackType(
-        string $fallback,
+        string | null $fallback,
         string $type,
         string $name,
         bool $isMobile,
@@ -605,7 +618,7 @@ final class TypeTest extends TestCase
     }
 
     /**
-     * @return array<int, array{fallback: string, type: string, name: string, isMobile: bool, isDesktop: bool, isConsole: bool, isTv: bool, isPhone: bool, isTablet: bool, hasDisplay: bool, hasTouch: bool, description: string}>
+     * @return array<int, array{fallback: string|null, type: string, name: string, isMobile: bool, isDesktop: bool, isConsole: bool, isTv: bool, isPhone: bool, isTablet: bool, hasDisplay: bool, hasTouch: bool, description: string}>
      *
      * @throws void
      */
@@ -723,6 +736,62 @@ final class TypeTest extends TestCase
                 'hasDisplay' => true,
                 'hasTouch' => true,
                 'description' => 'a general mobile device with its own touch screen',
+            ],
+            [
+                'fallback' => 'portable media player',
+                'type' => 'mobile-media-player',
+                'name' => 'Mobile Media Player',
+                'isMobile' => true,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => false,
+                'isPhone' => false,
+                'isTablet' => false,
+                'hasDisplay' => true,
+                'hasTouch' => true,
+                'description' => 'a mobile entertainment device with its own screen without the ability to make phone calls',
+            ],
+            [
+                'fallback' => 'smart-tv',
+                'type' => 'tv',
+                'name' => 'TV',
+                'isMobile' => false,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => true,
+                'isPhone' => false,
+                'isTablet' => false,
+                'hasDisplay' => true,
+                'hasTouch' => false,
+                'description' => 'a tv',
+            ],
+            [
+                'fallback' => 'tv device',
+                'type' => 'tv',
+                'name' => 'TV',
+                'isMobile' => false,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => true,
+                'isPhone' => false,
+                'isTablet' => false,
+                'hasDisplay' => true,
+                'hasTouch' => false,
+                'description' => 'a tv',
+            ],
+            [
+                'fallback' => null,
+                'type' => 'unknown',
+                'name' => 'Unknown',
+                'isMobile' => false,
+                'isDesktop' => false,
+                'isConsole' => false,
+                'isTv' => false,
+                'isPhone' => false,
+                'isTablet' => false,
+                'hasDisplay' => false,
+                'hasTouch' => false,
+                'description' => 'an unknown device',
             ],
         ];
     }
