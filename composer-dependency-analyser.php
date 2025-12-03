@@ -34,7 +34,10 @@ $config
     // do not complain about some modules
     ->ignoreErrorsOnPackage('mimmi20/coding-standard', [ErrorType::UNUSED_DEPENDENCY])
     ->ignoreErrorsOnPackage('phpstan/extension-installer', [ErrorType::UNUSED_DEPENDENCY])
-    ->ignoreErrorsOnPackage('phpstan/phpstan-phpunit', [ErrorType::UNUSED_DEPENDENCY])
+    ->ignoreErrorsOnPackage(
+        'jbelien/phpstan-sarif-formatter',
+        [ErrorType::UNUSED_DEPENDENCY],
+    )
 
     // Adjust analysis
     // dev packages are often used only in CI, so this is not enabled by default
