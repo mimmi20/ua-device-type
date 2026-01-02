@@ -39,7 +39,7 @@
     "ext-xmlwriter": "*",
     "infection/infection": "^0.32.0",
     "jbelien/phpstan-sarif-formatter": "^1.2.0",
-    "mimmi20/coding-standard": "^7.0.16",
+    "mimmi20/coding-standard": "^7.0.17",
     "nikic/php-parser": "^5.7.0",
     "phpstan/extension-installer": "^1.4.3",
     "phpstan/phpstan": "^2.1.33",
