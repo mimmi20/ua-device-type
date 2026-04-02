@@ -96,7 +96,6 @@ jobs:
       test-name: ""
       min-msi: 100
       min-covered-msi: 100
-      skip-phpunit: false
       skip-librabbitmq-install: true
       skip-libgif-install: true
       upload-codecov: true
