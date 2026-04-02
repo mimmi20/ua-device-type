@@ -25,19 +25,11 @@ jobs:
 
     uses: "mimmi20/ci/.github/workflows/validate-all.yml@8.4"
     with:
-      extensions: "ctype, curl, dom, fileinfo, iconv, intl, mbstring, simplexml, tokenizer, xml, xmlwriter"
-      ini-values: "opcache.enable=1, opcache.fast_shutdown=0, zend.assertions=1, assert.exception=On, intl.default_locale=de, intl.use_exceptions=1, zend.exception_ignore_args=0"
-      composer-options: "--optimize-autoloader --prefer-dist --prefer-stable -v"
-      skip-validate-composer: false
       skip-validate-yaml: false
       skip-validate-md: false
-      skip-phplint: false
-      skip-check-composer: false
-      skip-ec-checker: false
-      dependency-analyser-options: ""
 
   validate-php:
-    name: "Validate Project"
+    name: "Validate PHP"
 
     uses: "mimmi20/ci/.github/workflows/validate-php.yml@8.4"
     with:
@@ -45,8 +37,6 @@ jobs:
       ini-values: "opcache.enable=1, opcache.fast_shutdown=0, zend.assertions=1, assert.exception=On, intl.default_locale=de, intl.use_exceptions=1, zend.exception_ignore_args=0"
       composer-options: "--optimize-autoloader --prefer-dist --prefer-stable -v"
       skip-validate-composer: true
-      skip-validate-yaml: false
-      skip-validate-md: false
       skip-phplint: false
       skip-check-composer: false
       skip-ec-checker: false
@@ -64,11 +54,6 @@ jobs:
       extensions: "ctype, curl, dom, fileinfo, iconv, intl, mbstring, simplexml, tokenizer, xml, xmlwriter"
       ini-values: "opcache.enable=1, opcache.fast_shutdown=0, zend.assertions=1, assert.exception=On, intl.default_locale=de, intl.use_exceptions=1, zend.exception_ignore_args=0"
       composer-options: "--optimize-autoloader --prefer-dist --prefer-stable -v"
-      skip-php-install: false
-      skip-npm-install: true
-      skip-nasm-install: true
-      skip-libimagequant-install: true
-      skip-libpng-install: true
       skip-librabbitmq-install: true
       skip-libgif-install: true
 
@@ -94,15 +79,6 @@ jobs:
       skip-phpcs: false
       skip-phpstan: false
       skip-rector: false
-      skip-eslint: true
-      skip-stylelint: true
-      skip-prettier: true
-      skip-nasm-install: true
-      skip-libimagequant-install: true
-      skip-libpng-install: true
-      skip-librabbitmq-install: true
-      skip-libgif-install: true
-      skip-oxlint: true
       use-code-scanning: true
       phpcs-options: ""
 
