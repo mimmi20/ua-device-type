@@ -20,12 +20,12 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  validate:
+  validate-all:
     name: "Validate Project"
 
-    uses: "mimmi20/ci/.github/workflows/validate.yml@8.4"
+    uses: "mimmi20/ci/.github/workflows/validate-all.yml@8.4"
     with:
-      extensions: "ctype, curl, dom, iconv, intl, mbstring, simplexml, tokenizer, xml, xmlwriter"
+      extensions: "ctype, curl, dom, fileinfo, iconv, intl, mbstring, simplexml, tokenizer, xml, xmlwriter"
       ini-values: "opcache.enable=1, opcache.fast_shutdown=0, zend.assertions=1, assert.exception=On, intl.default_locale=de, intl.use_exceptions=1, zend.exception_ignore_args=0"
       composer-options: "--optimize-autoloader --prefer-dist --prefer-stable -v"
       skip-validate-composer: false
@@ -36,14 +36,32 @@ jobs:
       skip-ec-checker: false
       dependency-analyser-options: ""
 
+  validate-php:
+    name: "Validate Project"
+
+    uses: "mimmi20/ci/.github/workflows/validate-php.yml@8.4"
+    with:
+      extensions: "ctype, curl, dom, fileinfo, iconv, intl, mbstring, simplexml, tokenizer, xml, xmlwriter"
+      ini-values: "opcache.enable=1, opcache.fast_shutdown=0, zend.assertions=1, assert.exception=On, intl.default_locale=de, intl.use_exceptions=1, zend.exception_ignore_args=0"
+      composer-options: "--optimize-autoloader --prefer-dist --prefer-stable -v"
+      skip-validate-composer: true
+      skip-validate-yaml: false
+      skip-validate-md: false
+      skip-phplint: false
+      skip-check-composer: false
+      skip-ec-checker: false
+      dependency-analyser-options: ""
+
   install:
     name: "Install Project"
 
-    needs: "validate"
+    needs:
+      - "validate-all"
+      - "validate-php"
 
-    uses: "mimmi20/ci/.github/workflows/install.yml@8.4"
+    uses: "mimmi20/ci/.github/workflows/install-php.yml@8.4"
     with:
-      extensions: "ctype, curl, dom, iconv, intl, mbstring, simplexml, tokenizer, xml, xmlwriter"
+      extensions: "ctype, curl, dom, fileinfo, iconv, intl, mbstring, simplexml, tokenizer, xml, xmlwriter"
       ini-values: "opcache.enable=1, opcache.fast_shutdown=0, zend.assertions=1, assert.exception=On, intl.default_locale=de, intl.use_exceptions=1, zend.exception_ignore_args=0"
       composer-options: "--optimize-autoloader --prefer-dist --prefer-stable -v"
       skip-php-install: false
@@ -67,9 +85,9 @@ jobs:
 
     needs: "install"
 
-    uses: "mimmi20/ci/.github/workflows/analytics.yml@8.4"
+    uses: "mimmi20/ci/.github/workflows/analytics-php.yml@8.4"
     with:
-      extensions: "ctype, curl, dom, iconv, intl, mbstring, simplexml, tokenizer, xml, xmlwriter"
+      extensions: "ctype, curl, dom, fileinfo, iconv, intl, mbstring, simplexml, tokenizer, xml, xmlwriter"
       ini-values: "opcache.enable=1, opcache.fast_shutdown=0, zend.assertions=1, assert.exception=On, intl.default_locale=de, intl.use_exceptions=1, zend.exception_ignore_args=0"
       composer-options: "--optimize-autoloader --prefer-dist --prefer-stable -v"
       skip-php-cs-fixer: false
@@ -93,9 +111,9 @@ jobs:
 
     needs: "analytics"
 
-    uses: "mimmi20/ci/.github/workflows/test.yml@8.4"
+    uses: "mimmi20/ci/.github/workflows/test-php.yml@8.4"
     with:
-      extensions: "ctype, dom, fileinfo, intl, simplexml, tokenizer, xml, xmlwriter"
+      extensions: "ctype, curl, dom, fileinfo, iconv, intl, mbstring, simplexml, tokenizer, xml, xmlwriter"
       ini-values: "opcache.enable=1, opcache.fast_shutdown=0, zend.assertions=1, assert.exception=On, intl.default_locale=de, intl.use_exceptions=1, zend.exception_ignore_args=0"
       coverage: "xdebug"
       composer-options: "--optimize-autoloader --prefer-dist --prefer-stable -v"
@@ -134,9 +152,9 @@ jobs:
 
     steps:
       - name: Successful run
-        if: ${{ !(contains(needs.*.result, 'failure')) }}
+        if: ${{ !(contains(needs.*.result, 'failure')) && !(contains(needs.*.result, 'skipped')) }}
         run: exit 0
 
       - name: Failing run
-        if: ${{ contains(needs.*.result, 'failure') }}
+        if: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'skipped') }}
         run: exit 1

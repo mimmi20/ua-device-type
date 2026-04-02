@@ -27,7 +27,7 @@
     "source": "https://github.com/mimmi20/ua-device-type"
   },
   "require": {
-    "php": "~8.4.0 || ~8.5.0",
+    "php": "~8.4.0 || ~8.5.0 || ~8.6.0",
     "ext-mbstring": "*"
   },
   "require-dev": {
@@ -37,16 +37,16 @@
     "ext-tokenizer": "*",
     "ext-xml": "*",
     "ext-xmlwriter": "*",
-    "infection/infection": "^0.32.5",
+    "infection/infection": "^0.32.6",
     "jbelien/phpstan-sarif-formatter": "^1.2.0",
-    "mimmi20/coding-standard": "^7.0.25",
+    "mimmi20/coding-standard": "^7.0.27",
     "nikic/php-parser": "^5.7.0",
     "phpstan/extension-installer": "^1.4.3",
-    "phpstan/phpstan": "^2.1.39",
+    "phpstan/phpstan": "^2.1.44",
     "phpstan/phpstan-deprecation-rules": "^2.0.4",
     "phpstan/phpstan-phpunit": "^2.0.16",
     "phpunit/phpunit": "^12.5.7",
-    "rector/rector": "^2.3.8",
+    "rector/rector": "^2.3.9",
     "rector/type-perfect": "^2.1.2",
     "shipmonk/composer-dependency-analyser": "^1.8.4",
     "symfony/process": "^8.0.5",
