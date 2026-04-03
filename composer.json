@@ -37,6 +37,7 @@
     "ext-tokenizer": "*",
     "ext-xml": "*",
     "ext-xmlwriter": "*",
+    "ergebnis/composer-normalize": "^2.50.0",
     "infection/infection": "^0.32.6",
     "jbelien/phpstan-sarif-formatter": "^1.2.0",
     "mimmi20/coding-standard": "^7.0.27",
@@ -76,5 +77,11 @@
     "lock": false,
     "preferred-install": "dist",
     "sort-packages": true
+  },
+  "extra": {
+    "composer-normalize": {
+      "indent-size": 2,
+      "indent-style": "space"
+    }
   }
 }
