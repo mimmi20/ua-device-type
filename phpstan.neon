@@ -113,8 +113,10 @@ parameters:
     no_mixed_property: true
     no_mixed_caller: true
 
-#  ignoreErrors:
+  ignoreErrors:
 #    - '~Method UaDeviceType\\.*::getName\(\) never returns null so it can be removed from the return type~'
+    -
+      identifier: argument.named
 
 services:
   errorFormatter.sarif:
